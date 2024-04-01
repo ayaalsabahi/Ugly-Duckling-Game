@@ -5,17 +5,24 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    
+    [Header("Player Movement")]
+    private float moveSpeed;
+    private Rigidbody rb;
 
+    [Header("Player Controls")]
     public PlayerControls playerControls;
     private InputAction movementControls;
     private InputAction interactControls;
-    private Vector3 moveDirection  = Vector3.zero;
-    private Vector3 lastMoveDirection  = Vector3.zero;
+    private Vector2 moveDirection  = Vector2.zero;
+    private Vector2 lastMoveDirection  = Vector2.zero;
 
 
     private void Awake()
     {
         playerControls = new PlayerControls();
+        rb = gameObject.GetComponent<Rigidbody>();
+        moveSpeed = 5;
     }
 
     void OnEnable()
@@ -38,18 +45,26 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        moveDirection = movementControls.ReadValue<Vector3>();
-        //update movement base on key inputs
-        if(moveDirection != Vector3.zero)
-        {
-            lastMoveDirection = moveDirection;
-        } 
+ 
     }
 
     // Update is called once per frame
     void Update()
     {
+        moveDirection = movementControls.ReadValue<Vector2>();
+        //update movement base on key inputs
+        if(moveDirection != Vector2.zero)
+        {
+            lastMoveDirection = moveDirection;
+        }
         
+        Debug.Log("moveDirection =" + moveDirection);
+        Debug.Log("lastMoveDirection =" + lastMoveDirection);   
+    }
+
+    private void FixedUpdate()
+    {
+        rb.velocity = new Vector2(moveDirection.x * moveSpeed, rb.velocity.y);
     }
 
     private void Interact(InputAction.CallbackContext context)
