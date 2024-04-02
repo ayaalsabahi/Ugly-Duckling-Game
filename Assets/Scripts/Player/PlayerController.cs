@@ -56,7 +56,18 @@ public class PlayerController : MonoBehaviour
         forceDirection += moveControls.ReadValue<Vector2>().x * GetCameraRight(playerCam) * moveForce;
         forceDirection += moveControls.ReadValue<Vector2>().y * GetCameraForward(playerCam) * moveForce;
         rb.AddForce(forceDirection, ForceMode.Impulse);
+        // if (rb.velocity.magnitude > maxSpeed)
+        // {
+        //     // If it does, normalize the velocity vector to maintain direction and multiply by maxSpeed to cap the velocity
+        //     rb.velocity = rb.velocity.normalized * maxSpeed;
+        // }
         forceDirection = Vector3.zero;
+
+        LookAt();
+        //may change how looking works
+
+
+        
     }
 
     private Vector3 GetCameraForward(Camera cam)
@@ -81,6 +92,20 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         Debug.Log(rb.velocity);
+    }
+
+    private void LookAt()
+    {
+        Vector3 direction = rb.velocity;
+        direction.y = 0;
+        if(moveControls.ReadValue<Vector2>().sqrMagnitude > .1f && direction.sqrMagnitude > .1f)
+        {
+            this.rb.rotation = Quaternion.LookRotation(direction, Vector3.up);
+        }
+        else
+        {
+            rb.angularVelocity = Vector3.zero;
+        }
     }
 
 }
