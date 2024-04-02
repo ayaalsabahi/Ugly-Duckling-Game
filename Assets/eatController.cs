@@ -5,6 +5,12 @@ using UnityEngine;
 public class eatController : MonoBehaviour
 {
     private ParticleSystem particleSystemEnemy;
+    private int eatCount = 0; //this tells us how many times space was pressed
+    public int maxEat = 5; //number of times to press before an object gets eaten
+
+    [Header("Events")]
+    public GameEvent biggerAbility;
+    public GameEvent duckEaten; 
 
     private void Start()
     {
@@ -27,6 +33,20 @@ public class eatController : MonoBehaviour
     {
         Debug.Log("particle system activated");
         particleSystemEnemy.Play();
+        eatCount++;
+        if(eatCount == maxEat)
+        {
+            duckEaten.Raise();
+            Destroy(gameObject);
+
+            if(gameObject.name == "biggerDuck") //different ducks give different abilities
+                                                //pass it onto the level manager to say
+                                                //that you got a certain ability & the level manager handles it
+            {
+                biggerAbility.Raise();
+                
+            }
+        }
     }
 
     public void Deactivate()
