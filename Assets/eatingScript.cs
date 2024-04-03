@@ -31,7 +31,6 @@ public class eatingScript : MonoBehaviour
             if (currentEnemy != null)
             {
                 currentEnemy = null; // Reset the reference
-                //eatContLocal.Deactivate();
             }
         }
     }
@@ -44,7 +43,7 @@ public class eatingScript : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.forward, out hit, detectionDistance))
         {
             // Check if the raycast hits an enemy
-            if (hit.collider.CompareTag("Edible"))
+            if (hit.collider.CompareTag("biggerDuck")) //add mpre later on depending on how many duck types we have
             {
                 // Store the reference to the enemy
                 currentEnemy = hit.collider.gameObject;

@@ -39,7 +39,7 @@ public class eatController : MonoBehaviour
             duckEaten.Raise();
             Destroy(gameObject);
 
-            if(gameObject.name == "biggerDuck") //different ducks give different abilities
+            if(gameObject.CompareTag("biggerDuck")) //different ducks give different abilities
                                                 //pass it onto the level manager to say
                                                 //that you got a certain ability & the level manager handles it
             {

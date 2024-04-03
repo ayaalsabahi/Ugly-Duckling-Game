@@ -8,10 +8,33 @@ public class GameManager : MonoBehaviour
 
     //change the skin to be bigger & different color
 
+    public GameObject greenery;
+    public Material newMaterial;
+    public GameObject mainDuck; 
+    public Vector3 newScale = new Vector3(2f, 2f, 2f); // New scale for the object
+
+    private void Start()
+    {
+       
+    }
+
     public void BiggerAbility()
     {
         //change skin
         //set the greenery to isTrigger and be able to pass through it
+
+        // Get the Renderer component attached to this GameObject
+        Renderer renderer = mainDuck.GetComponent<Renderer>();
+        renderer.material = newMaterial; //change the color of the duck
+
+
+        Collider collider = greenery.GetComponent<Collider>();
+        collider.isTrigger = true; //change the ability to pass through greenery
+
+        Transform transform = mainDuck.transform;
+
+        transform.localScale = newScale; //change the object size 
+
     }
 
 

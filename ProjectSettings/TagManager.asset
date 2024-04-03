@@ -4,7 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Edible
+  - biggerDuck
   layers:
   - Default
   - TransparentFX
