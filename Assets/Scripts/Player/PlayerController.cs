@@ -88,6 +88,20 @@ public class PlayerController : MonoBehaviour
         rb.MoveRotation(rb.rotation * newRotation);
     }
 
+    private void LookAt()
+    {
+        Vector3 direction = rb.velocity;
+        direction.y = 0;
+        if(moveControls.ReadValue<Vector2>().sqrMagnitude > .1f && direction.sqrMagnitude > .1f)
+        {
+            this.rb.rotation = Quaternion.LookRotation(direction, Vector3.up);
+        }
+        else
+        {
+            rb.angularVelocity = Vector3.zero;
+        }
+    }
+
     private Vector3 GetCameraForward(Camera cam)
     {
         Vector3 forward = cam.transform.forward;
@@ -110,20 +124,6 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         Debug.Log(rb.velocity);
-    }
-
-    private void LookAt()
-    {
-        Vector3 direction = rb.velocity;
-        direction.y = 0;
-        if(moveControls.ReadValue<Vector2>().sqrMagnitude > .1f && direction.sqrMagnitude > .1f)
-        {
-            this.rb.rotation = Quaternion.LookRotation(direction, Vector3.up);
-        }
-        else
-        {
-            rb.angularVelocity = Vector3.zero;
-        }
     }
 
 }
