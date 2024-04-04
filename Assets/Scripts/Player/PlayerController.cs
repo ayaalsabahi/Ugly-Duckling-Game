@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Misc")]
     public Camera playerCam;
+    public float detectionDistance;
 
 
     private void Awake()
@@ -118,8 +119,21 @@ public class PlayerController : MonoBehaviour
 
     private void InteractEvent(InputAction.CallbackContext context)
     {
+        // StartCoroutine(InteractCoroutine());
         Debug.Log("lets eat");
     }
+
+
+    // IEnumerator InteractCoroutine()
+    // {
+    //     RaycastHit hit = Physics.Raycast(transform.position, transform.forward, out hit, detectionDistance);
+    //     if (hit.collider != null)
+    //     {
+    //         Debug.Log("Hit: " + hit.collider.name);
+    //         // Perform the interaction
+    //         yield return hit.collider.GetComponent<Interactable>()?.Interact();
+    //     }
+    // }
 
     private void Update()
     {
