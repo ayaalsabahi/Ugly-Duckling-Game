@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     public Vector3 forceDirection = Vector3.zero; 
     private Rigidbody rb;
 
+    public float sensitivity = 1.0f;
+
     [Header("Player Controls")]
     public PlayerControls playerControls;
     private InputAction moveControls;
@@ -64,10 +66,26 @@ public class PlayerController : MonoBehaviour
         forceDirection = Vector3.zero;
 
         LookAt();
+        // LookAtWithViewControls();
         //may change how looking works
 
 
         
+    }
+
+    private void LookAtWithViewControls()
+    {
+        // Read the horizontal value from your view controls (e.g., mouse X axis or joystick horizontal axis)
+        float horizontalViewInput = playerControls.Character.View.ReadValue<Vector2>().x;
+
+        // You might want to apply a sensitivity multiplier to control the rotation speed
+        // float sensitivity = 1.0f; // Adjust this value as needed
+
+        // Calculate the new rotation around the Y axis based on the input
+        Quaternion newRotation = Quaternion.Euler(0f, horizontalViewInput * sensitivity, 0f);
+
+        // Apply the rotation to the player
+        rb.MoveRotation(rb.rotation * newRotation);
     }
 
     private Vector3 GetCameraForward(Camera cam)
