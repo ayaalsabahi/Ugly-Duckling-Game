@@ -6,7 +6,7 @@ public class eatingScript : MonoBehaviour
 {
 
     /*
-     Attach this script to the 'Player', this script allows the detection of an object tagged with the appropriate tupe,
+     Attach this script to the 'Player', this script allows the detection of an object tagged with the appropriate type,
      The edible object type must have a 'eatController' script and particleSystem attached to it.
      */
     public float detectionDistance = 10f; // Maximum distance for detection
