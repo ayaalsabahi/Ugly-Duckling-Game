@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class eatController : MonoBehaviour
 {
+
+    /*
+        Attatch this to any enemy that would be eaten, this solely takes care of the 
+     */ 
     private ParticleSystem particleSystemEnemy;
     private int eatCount = 0; //this tells us how many times space was pressed
     public int maxEat = 5; //number of times to press before an object gets eaten

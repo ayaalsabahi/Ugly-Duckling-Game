@@ -7,11 +7,13 @@ public class GameManager : MonoBehaviour
     //create a timer for how long they have that functionality later on??
 
     //change the skin to be bigger & different color
-
-    public GameObject greenery;
+    
+    public GameObject greenery1; //we can make an array of different greenieries to be unlocked later on
     public Material newMaterial;
     public GameObject mainDuck; 
     public Vector3 newScale = new Vector3(2f, 2f, 2f); // New scale for the object
+
+    public bool isHidden = false; //refers to the 
 
     private void Start()
     {
@@ -28,7 +30,7 @@ public class GameManager : MonoBehaviour
         renderer.material = newMaterial; //change the color of the duck
 
 
-        Collider collider = greenery.GetComponent<Collider>();
+        Collider collider = greenery1.GetComponent<Collider>();
         collider.isTrigger = true; //change the ability to pass through greenery
 
         Transform transform = mainDuck.transform;
