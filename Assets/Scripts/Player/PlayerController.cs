@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     [Header("Misc")]
     public Camera playerCam;
     public float detectionDistance;
+    public List<string> inventory = new List<string>();
 
 
     private void Awake()
@@ -39,6 +40,8 @@ public class PlayerController : MonoBehaviour
         //Get Body and set important vals
         rb = gameObject.GetComponent<Rigidbody>();
         moveSpeed = 5;
+        detectionDistance = 5;
+
     }
 
     private void OnEnable()
@@ -119,25 +122,38 @@ public class PlayerController : MonoBehaviour
 
     private void InteractEvent(InputAction.CallbackContext context)
     {
-        // StartCoroutine(InteractCoroutine());
+        StartCoroutine(InteractCoroutine());
         Debug.Log("lets eat");
     }
 
 
-    // IEnumerator InteractCoroutine()
-    // {
-    //     RaycastHit hit = Physics.Raycast(transform.position, transform.forward, out hit, detectionDistance);
-    //     if (hit.collider != null)
-    //     {
-    //         Debug.Log("Hit: " + hit.collider.name);
-    //         // Perform the interaction
-    //         yield return hit.collider.GetComponent<Interactable>()?.Interact();
-    //     }
-    // }
+    IEnumerator InteractCoroutine()
+    {
+        RaycastHit hit;
+
+        // Vector3 forward = transform.TransformDirection(Vector3.forward) * detectionDistance;
+        // Debug.DrawLine(transform.position, transform.position + forward, Color.blue, 10.0f);
+
+        if(Physics.Raycast(transform.position, transform.forward, out hit, detectionDistance))
+        {
+            Debug.Log("Hit: " + hit.collider.name);
+            Interactable interactableComponent = hit.collider.GetComponent<Interactable>();
+            if (interactableComponent != null)
+            {
+                yield return interactableComponent.Interact(); // Assuming this code is inside a Coroutine since 'yield return' is used
+            }
+        }
+    }
+
+    public void AddToInventory(string itemID)
+    {
+        inventory.Add(itemID);
+        Debug.Log("Item added to inventory: " + itemID);
+    }
 
     private void Update()
     {
-        Debug.Log(rb.velocity);
+        // Debug.Log(rb.velocity);
     }
 
 }
