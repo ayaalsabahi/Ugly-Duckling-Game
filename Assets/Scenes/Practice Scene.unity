@@ -636,7 +636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e1a9cb6d84b2459e895288caa97ca13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quest: {fileID: 0}
+  quest: {fileID: 11400000, guid: aaeb1ae2b15084c3d8399df29a895373, type: 2}
 --- !u!54 &1558475345
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -812,11 +812,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlayerDuck
-      objectReference: {fileID: 0}
-    - target: {fileID: 6555629181811204017, guid: 9ecbe9f40f8e8446cb02665ff73307cd,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6608179485724027464, guid: 9ecbe9f40f8e8446cb02665ff73307cd,
         type: 3}

@@ -170,6 +170,7 @@ MonoBehaviour:
   lastMoveDirection: {x: 0, y: 0}
   playerCam: {fileID: 0}
   detectionDistance: 0
+  inventory: []
 --- !u!1 &6555629181811204017
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,7 +189,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &685624715600263065
 Transform:
   m_ObjectHideFlags: 0
