@@ -35,7 +35,7 @@ public class eatController : MonoBehaviour
 
     public void Activate()
     {
-        
+        Debug.Log("I am an activated duck, tag:"+ gameObject.tag);
         particleSystemEnemy.Play();
         eatCount++;
         if (eatCount == maxEat)

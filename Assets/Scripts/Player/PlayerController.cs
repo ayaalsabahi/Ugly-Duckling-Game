@@ -27,6 +27,9 @@ public class PlayerController : MonoBehaviour
     public float detectionDistance;
     public List<string> inventory = new List<string>();
 
+    //drawing the radius to see where the detection is
+    private GameObject radiusVisual; // Declare the GameObject outside of any method
+
 
     private void Awake()
     {
@@ -40,7 +43,6 @@ public class PlayerController : MonoBehaviour
         //Get Body and set important vals
         rb = gameObject.GetComponent<Rigidbody>();
         moveSpeed = 5;
-        detectionDistance = 5;
 
     }
 
@@ -154,6 +156,49 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         // Debug.Log(rb.velocity);
+        DrawRadius();
+    }
+
+
+    //temporarily here to draw the radius around a player for debuging purposes
+    private void DrawRadius()
+    {
+        ClearRadius();
+
+        // Create a new empty GameObject to hold the line renderer
+        radiusVisual = new GameObject("RadiusVisual");
+        LineRenderer lineRenderer = radiusVisual.AddComponent<LineRenderer>();
+
+        // Configure the line renderer settings
+        lineRenderer.positionCount = 360; // Number of vertices for the circle
+        lineRenderer.startWidth = 0.1f; // Thickness of the line
+        lineRenderer.endWidth = 0.1f;
+        lineRenderer.useWorldSpace = false; // Use local space for vertices
+
+        // Calculate points for the circle
+        Vector3[] points = new Vector3[360];
+        for (int i = 0; i < 360; i++)
+        {
+            float angle = Mathf.Deg2Rad * i;
+            float x = Mathf.Sin(angle) * detectionDistance;
+            float z = Mathf.Cos(angle) * detectionDistance;
+            points[i] = new Vector3(x, 0f, z);
+        }
+
+        // Set the points for the line renderer
+        lineRenderer.SetPositions(points);
+
+        // Set the position of the circle around the player
+        radiusVisual.transform.position = transform.position;
+    }
+
+    private void ClearRadius()
+    {
+        // If radiusVisual exists, destroy it to clear the visual radius
+        if (radiusVisual != null)
+        {
+            Destroy(radiusVisual);
+        }
     }
 
 }

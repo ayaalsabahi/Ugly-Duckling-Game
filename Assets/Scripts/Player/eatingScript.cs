@@ -13,58 +13,66 @@ public class eatingScript : MonoBehaviour
     private GameObject currentEnemy = null; // Reference to the current enemy
     private eatController eatContLocal;
 
+    private List<GameObject> currentEnemies = new List<GameObject>(); // List to store references to current enemies
+    private List<eatController> eatContLocals = new List<eatController>(); // List to store references to eatController components
+
     private void Update()
     {
-        if(LookEnemy() && Input.GetKeyDown(KeyCode.Space))
+        if (LookEnemy() && Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Player is looking at the enemy and pressed 'Space'!");
+            Debug.Log("Player is looking at enemies and pressed 'Space'!");
 
-            if(currentEnemy != null){
-
+            foreach (GameObject enemy in currentEnemies)
+            {
                 Debug.Log("Activated the eating controller");
-                eatContLocal.Activate();                                                            //also possibly add in sound?? 
+                int index = currentEnemies.IndexOf(enemy);
+
+                if (currentEnemies.Count != eatContLocals.Count) Debug.Log("two lists are not the same length in eating script");
+
+                if (index < eatContLocals.Count) //sanity check 
+                {
+                    eatContLocals[index].Activate(); // Activate eatController for the current enemy
+                }
+                // Add sound activation code here if needed
             }
         }
-
         else
         {
-            if (currentEnemy != null)
-            {
-                currentEnemy = null; // Reset the reference
-            }
+            // Clear the lists if no enemies are detected
+            currentEnemies.Clear();
+            eatContLocals.Clear();
         }
     }
 
 
     //This function checks to see if the player is currently looking at at enemy
-    private bool LookEnemy() {
+    private bool LookEnemy()
+    {
 
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, detectionDistance))
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, detectionDistance);
+        bool foundEnemy = false;
+
+        foreach (Collider collider in hitColliders)
         {
-            // Check if the raycast hits an enemy
-            if (hit.collider.CompareTag("biggerDuck") || hit.collider.CompareTag("EnemyRun")) //add mpre later on depending on how many duck types we have
+            if (collider.CompareTag("biggerDuck") || collider.CompareTag("EnemyRun")) // add more tags later depending on how many ducks we have
             {
-                // Store the reference to the enemy
-                if (hit.collider.CompareTag("EnemyRun"))
+                foundEnemy = true;
+                if (!currentEnemies.Contains(collider.gameObject))
                 {
-                    Debug.Log("I collided w enemyRun");
-                }
-                
-                currentEnemy = hit.collider.gameObject;
-                if(currentEnemy == null)
+                    currentEnemies.Add(collider.gameObject);
+                }  // this adds the game object to our list 
+
+                eatController eatContLocal = collider.gameObject.GetComponent<eatController>();
+                if (eatContLocal != null)
                 {
-                    Debug.Log("curr enemy is null");
+                    eatContLocals.Add(eatContLocal);
                 }
-                // Get the EnemyController script attached to the enemy
-                eatContLocal = currentEnemy.GetComponent<eatController>();
-                if(eatContLocal == null)
-                {
-                    Debug.Log("eatContLocal is null");
-                }
-                return true;
+
             }
         }
-        return false;
+
+        return foundEnemy; //tells us if we have enemies or not
     }
+
+     
 }
