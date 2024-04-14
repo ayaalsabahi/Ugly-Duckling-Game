@@ -5,7 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - biggerDuck
-  - enemyRun
+  - EnemyRun
+  - Weeds
   layers:
   - Default
   - TransparentFX

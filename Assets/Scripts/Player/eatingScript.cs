@@ -9,7 +9,7 @@ public class eatingScript : MonoBehaviour
      Attach this script to the 'Player', this script allows the detection of an object tagged with the appropriate type,
      The edible object type must have a 'eatController' script and particleSystem attached to it.
      */
-    public float detectionDistance = 10f; // Maximum distance for detection
+    public float detectionDistance; // Maximum distance for detection
     private GameObject currentEnemy = null; // Reference to the current enemy
     private eatController eatContLocal;
 
@@ -43,9 +43,14 @@ public class eatingScript : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.forward, out hit, detectionDistance))
         {
             // Check if the raycast hits an enemy
-            if (hit.collider.CompareTag("biggerDuck")) //add mpre later on depending on how many duck types we have
+            if (hit.collider.CompareTag("biggerDuck") || hit.collider.CompareTag("EnemyRun")) //add mpre later on depending on how many duck types we have
             {
                 // Store the reference to the enemy
+                if (hit.collider.CompareTag("EnemyRun"))
+                {
+                    Debug.Log("I collided w enemyRun");
+                }
+                
                 currentEnemy = hit.collider.gameObject;
                 if(currentEnemy == null)
                 {

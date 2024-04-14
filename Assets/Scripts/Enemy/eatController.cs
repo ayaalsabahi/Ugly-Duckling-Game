@@ -35,20 +35,26 @@ public class eatController : MonoBehaviour
 
     public void Activate()
     {
-        Debug.Log("particle system activated");
+        
         particleSystemEnemy.Play();
         eatCount++;
-        if(eatCount == maxEat)
+        if (eatCount == maxEat)
         {
             duckEaten.Raise();
             Destroy(gameObject);
 
-            if(gameObject.CompareTag("biggerDuck")) //different ducks give different abilities
-                                                //pass it onto the level manager to say
-                                                //that you got a certain ability & the level manager handles it
+            
+            if (gameObject.CompareTag("biggerDuck") ) //different ducks give different abilities
+                                                    //pass it onto the level manager to say
+                                                    //that you got a certain ability & the level manager handles it
             {
                 biggerAbility.Raise();
                 
+            }
+
+            if (gameObject.CompareTag("EnemyRun"))
+            {
+                Debug.Log("Run away");
             }
         }
     }

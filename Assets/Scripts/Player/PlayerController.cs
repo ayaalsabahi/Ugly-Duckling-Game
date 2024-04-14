@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -120,7 +121,7 @@ public class PlayerController : MonoBehaviour
     private void InteractEvent(InputAction.CallbackContext context)
     {
         // StartCoroutine(InteractCoroutine());
-        Debug.Log("lets eat");
+        //Debug.Log("lets eat");
     }
 
 
@@ -137,7 +138,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(rb.velocity);
+        //Debug.Log(rb.velocity);
     }
 
 }
