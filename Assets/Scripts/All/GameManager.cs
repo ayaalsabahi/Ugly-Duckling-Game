@@ -33,6 +33,21 @@ public class GameManager : MonoBehaviour
         Instance = this;
     }
 
+    private void Start()
+    {
+        DialogueManager.Instance.OnShowDialogue += () =>
+        {
+            //state = GameState.Dialogue;
+        };
+
+        DialogueManager.Instance.OnCloseDialogue += () =>
+        {
+            //if (GameState.Dialogue)
+            //state = GameState.FreeRoam;
+        };
+
+    }
+
     public void Hiding() //hidding in the weeds
     {
 

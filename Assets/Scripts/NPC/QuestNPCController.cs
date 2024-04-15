@@ -5,10 +5,13 @@ using UnityEngine;
 
 public class QuestNPCController : MonoBehaviour, Interactable
 {
-    public Quest quest; 
+    public Quest quest;
+    [SerializeField] Dialogue dialogue;
 
     public IEnumerator Interact()
     {
+        StartCoroutine(DialogueManager.Instance.ShowDialogue(dialogue));
+
         if (quest == null)
         {
             Debug.Log("No quest assigned.");
