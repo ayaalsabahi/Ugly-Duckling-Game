@@ -10,15 +10,19 @@ public class GameManager : MonoBehaviour
     //making it a singleton, refrence: https://gamedevbeginner.com/singletons-in-unity-the-right-way/
     public static GameManager Instance { get; private set; }
 
+    private enum GameState
+    {
+        FreeRoam,
+        Dialogue
+    }
 
+    GameState state;
 
     //create a timer for how long they have that functionality later on??
     public GameObject greenery1; //we can make an array of different greenieries to be unlocked later on
     public Material newMaterial;
     public GameObject mainDuck; 
     public Vector3 newScale = new Vector3(2f, 2f, 2f); // New scale for the object
-
-
 
     public bool isHidden = false; //refers to whether we are in the weeds or not 
     public float detectionRadius; 
@@ -37,15 +41,28 @@ public class GameManager : MonoBehaviour
     {
         DialogueManager.Instance.OnShowDialogue += () =>
         {
-            //state = GameState.Dialogue;
+            state = GameState.Dialogue;
         };
 
         DialogueManager.Instance.OnCloseDialogue += () =>
         {
-            //if (GameState.Dialogue)
-            //state = GameState.FreeRoam;
+            if (state == GameState.Dialogue)
+                state = GameState.FreeRoam;
         };
 
+        state = GameState.FreeRoam;
+    }
+
+    private void Update()
+    {
+        if (state == GameState.FreeRoam)
+        {
+
+        }
+        else if (state == GameState.Dialogue)
+        {
+            DialogueManager.Instance.HandleUpdate();
+        }
     }
 
     public void Hiding() //hidding in the weeds
@@ -58,9 +75,6 @@ public class GameManager : MonoBehaviour
     {
         isHidden = false;
     }
-
-
-
 
     //change the skin to be bigger & different color
     public void BiggerAbility()
