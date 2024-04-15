@@ -4989,7 +4989,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f6c69ad0e48b4950a4ae1c0b3aacd27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRadius: 3
+  detectionRadius: 5
+  enemyDistanceRun: 10
+  player: {fileID: 5626540214774647822, guid: 9ecbe9f40f8e8446cb02665ff73307cd, type: 3}
+  fleematerial: {fileID: 2100000, guid: 62d2c8abcb6f84fdfb53bbc14b8a02d8, type: 2}
 --- !u!114 &5598333031534892113
 MonoBehaviour:
   m_ObjectHideFlags: 0

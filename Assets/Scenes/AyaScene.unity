@@ -191,18 +191,20 @@ PrefabInstance:
       propertyPath: m_TagString
       value: EnemyRun
       objectReference: {fileID: 0}
+    - target: {fileID: 8006643420775718498, guid: ba0d4d2db976744a49f7bef113c522c7,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 698514318}
+    - target: {fileID: 8006643420775718498, guid: ba0d4d2db976744a49f7bef113c522c7,
+        type: 3}
+      propertyPath: detectionRadius
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7022169548184598008, guid: ba0d4d2db976744a49f7bef113c522c7,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2080554252}
-    - targetCorrespondingSourceObject: {fileID: 7022169548184598008, guid: ba0d4d2db976744a49f7bef113c522c7,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2080554251}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba0d4d2db976744a49f7bef113c522c7, type: 3}
 --- !u!1 &498833545
 GameObject:
@@ -768,18 +770,15 @@ PrefabInstance:
       propertyPath: m_TagString
       value: EnemyRun
       objectReference: {fileID: 0}
+    - target: {fileID: 8006643420775718498, guid: ba0d4d2db976744a49f7bef113c522c7,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 698514318}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7022169548184598008, guid: ba0d4d2db976744a49f7bef113c522c7,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1551453979}
-    - targetCorrespondingSourceObject: {fileID: 7022169548184598008, guid: ba0d4d2db976744a49f7bef113c522c7,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1551453978}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba0d4d2db976744a49f7bef113c522c7, type: 3}
 --- !u!4 &1551453976 stripped
 Transform:
@@ -787,53 +786,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1551453975}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1551453977 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7022169548184598008, guid: ba0d4d2db976744a49f7bef113c522c7,
-    type: 3}
-  m_PrefabInstance: {fileID: 1551453975}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1551453978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1551453977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e06ed7bed0d7c4bbdaa0434dc24ebd7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: f33d79e5b6fd0469f8b61e6f761476ec, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1551453979}
-        m_TargetAssemblyTypeName: enemyFlee, Assembly-CSharp
-        m_MethodName: isNear
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1551453979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1551453977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f6c69ad0e48b4950a4ae1c0b3aacd27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  detectionRadius: 3
 --- !u!1 &1663545080
 GameObject:
   m_ObjectHideFlags: 0
@@ -1195,59 +1147,12 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!1 &2080554249 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7022169548184598008, guid: ba0d4d2db976744a49f7bef113c522c7,
-    type: 3}
-  m_PrefabInstance: {fileID: 390870632}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2080554250 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1364905683992018368, guid: ba0d4d2db976744a49f7bef113c522c7,
     type: 3}
   m_PrefabInstance: {fileID: 390870632}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2080554251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2080554249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e06ed7bed0d7c4bbdaa0434dc24ebd7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: f33d79e5b6fd0469f8b61e6f761476ec, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2080554252}
-        m_TargetAssemblyTypeName: enemyFlee, Assembly-CSharp
-        m_MethodName: isNear
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &2080554252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2080554249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f6c69ad0e48b4950a4ae1c0b3aacd27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  detectionRadius: 3
 --- !u!1 &2110430355 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6626983041979963985, guid: 3562d752b936c45b79e3177621b2d1e2,
