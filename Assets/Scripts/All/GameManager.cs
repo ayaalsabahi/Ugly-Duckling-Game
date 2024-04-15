@@ -69,15 +69,15 @@ public class GameManager : MonoBehaviour
         //set the greenery to isTrigger and be able to pass through it
 
         // Get the Renderer component attached to this GameObject
-        Renderer renderer = mainDuck.GetComponent<Renderer>();
-        renderer.material = newMaterial; //change the color of the duck
+        //Renderer renderer = mainDuck.GetComponent<Renderer>();
+        //renderer.material = newMaterial; //change the color of the duck
 
 
         Collider collider = greenery1.GetComponent<Collider>();
         collider.isTrigger = true; //change the ability to pass through greenery
 
-        //Transform transform = mainDuck.transform;
-        //transform.localScale = newScale; //change the object scale 
+        Transform transform = mainDuck.transform;
+        transform.localScale = newScale; //change the object scale 
 
     }
 
