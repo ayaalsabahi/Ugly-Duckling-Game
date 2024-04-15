@@ -409,6 +409,11 @@ PrefabInstance:
       propertyPath: mainDuck
       value: 
       objectReference: {fileID: 866075019}
+    - target: {fileID: 5032263372971528273, guid: 4798549833dc74fd1b9d4ffd8b0ac245,
+        type: 3}
+      propertyPath: greenery1
+      value: 
+      objectReference: {fileID: 787120151}
     - target: {fileID: 5251171915228464375, guid: 4798549833dc74fd1b9d4ffd8b0ac245,
         type: 3}
       propertyPath: m_Name
