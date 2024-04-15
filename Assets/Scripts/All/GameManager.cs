@@ -18,8 +18,11 @@ public class GameManager : MonoBehaviour
     public GameObject mainDuck; 
     public Vector3 newScale = new Vector3(2f, 2f, 2f); // New scale for the object
 
-    public bool isHidden = false; //refers to whether we are in the weeds or not 
 
+
+    public bool isHidden = false; //refers to whether we are in the weeds or not 
+    public float detectionRadius; 
+    
     private void Awake()
     {
         if (Instance != null && Instance != this)

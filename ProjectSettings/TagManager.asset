@@ -7,6 +7,7 @@ TagManager:
   - biggerDuck
   - EnemyRun
   - Weeds
+  - Barrier
   layers:
   - Default
   - TransparentFX

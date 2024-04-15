@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour
         //Get Body and set important vals
         rb = gameObject.GetComponent<Rigidbody>();
         moveSpeed = 5;
+        detectionDistance = GameManager.Instance.detectionRadius; 
 
     }
 

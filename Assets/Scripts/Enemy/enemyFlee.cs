@@ -9,10 +9,15 @@ public class enemyFlee : MonoBehaviour
     
      Thinsg to keep in mind:
         - is it timed?
-        - does it need to be turned on once */
+        - does it need to be turned on once for everyone or just the ones in the radius
 
 
-    public float detectionRadius;
+    For now:
+        - they run up to 30s and only as long as they are at a distance away by detection distance 
+     */
+
+    public float detectionRadius; //this distance is for the 'eating' being visible versus not 
+
     
 
     //get all the objects that are near me and check if any of the objects nearby is the player
