@@ -79,4 +79,13 @@ public class enemyFlee : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, detectionRadius);
     }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Barrier")) //barrier is where the game objects dissapear 
+        {
+            Destroy(gameObject);
+        }
+    }
 }
