@@ -1049,7 +1049,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc4992b04d38e434c85dfaf8c0592cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questList: []
+  questList:
+  - {fileID: 11400000, guid: aaeb1ae2b15084c3d8399df29a895373, type: 2}
   player: {fileID: 254653773013049616}
 --- !u!4 &1875993569
 Transform:
