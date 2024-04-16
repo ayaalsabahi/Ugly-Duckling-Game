@@ -27,6 +27,7 @@ public class QuestManager : MonoBehaviour
         Debug.Log("checking staturs");
         foreach(Quest quest in questList)
         {
+            Debug.Log(quest.collectibleID);
             if(quest.collectibleID != null)
             {
                 if(pc.inventory.Contains(quest.collectibleID))

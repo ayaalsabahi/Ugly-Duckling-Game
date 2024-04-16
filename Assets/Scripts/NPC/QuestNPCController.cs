@@ -18,12 +18,12 @@ public class QuestNPCController : MonoBehaviour, Interactable
             Debug.Log("No quest assigned.");
             yield break;
         }
+        QM.CompletionStatus();
 
         if(!quest.isComplete)
         {
             Debug.Log(quest.startDialouge);
             Debug.Log("Quest not completed yet: " + quest.description);
-            QM.CompletionStatus();
 
         }
         else

@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: TestQuest
   m_EditorClassIdentifier: 
   questID: 0
+  collectibleID: Hat
+  duckToEat: 
+  noDucksToEat: 
   description: Get Hat
   startDialouge: Hello
   endDialouge: Thanks
