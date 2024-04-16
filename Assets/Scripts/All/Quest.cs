@@ -7,6 +7,8 @@ public class Quest : ScriptableObject
 {
     public string questID;
     public string collectibleID;
+    public string duckToEat;
+    public string noDucksToEat;
     public string description;
     public string startDialouge;
     public string endDialouge;

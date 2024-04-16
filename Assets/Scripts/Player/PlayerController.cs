@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
     public Camera playerCam;
     public float detectionDistance;
     public List<string> inventory = new List<string>();
+    public List<string> stomach = new List<string>();
+    public int noDucksEaten;
 
     //drawing the radius to see where the detection is
     private GameObject radiusVisual; // Declare the GameObject outside of any method
