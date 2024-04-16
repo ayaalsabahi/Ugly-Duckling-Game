@@ -37,34 +37,6 @@ public class GameManager : MonoBehaviour
         Instance = this;
     }
 
-    private void Start()
-    {
-        DialogueManager.Instance.OnShowDialogue += () =>
-        {
-            state = GameState.Dialogue;
-        };
-
-        DialogueManager.Instance.OnCloseDialogue += () =>
-        {
-            if (state == GameState.Dialogue)
-                state = GameState.FreeRoam;
-        };
-
-        state = GameState.FreeRoam;
-    }
-
-    private void Update()
-    {
-        if (state == GameState.FreeRoam)
-        {
-
-        }
-        else if (state == GameState.Dialogue)
-        {
-            DialogueManager.Instance.HandleUpdate();
-        }
-    }
-
     public void Hiding() //hidding in the weeds
     {
 

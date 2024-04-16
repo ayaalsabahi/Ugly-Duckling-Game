@@ -24,41 +24,44 @@ public class DialogueManager : MonoBehaviour
         Instance = this;
     }
 
-    Dialogue dialogue;
-    int currentLine = 0;
-    bool isTyping = false;
+    Dialogue localDialogue;
+    public bool isTyping = false;
 
-    public IEnumerator ShowDialogue(Dialogue dialogue)
+    public IEnumerator ShowDialogue(Dialogue receivingDialogue)
     {
+        SetDialogue(receivingDialogue);
+
         yield return new WaitForEndOfFrame();
 
-        OnShowDialogue?.Invoke();
-
         dialogueBox.SetActive(true);
-        StartCoroutine(TypeDialogue(dialogue.Lines[0]));
+        StartCoroutine(TypeDialogue(receivingDialogue.Lines[0]));
     }
 
-    public void HandleUpdate()
+    private void SetDialogue(Dialogue receivingDialogue)
     {
-        if (Input.GetKeyDown(KeyCode.Q) && !isTyping)
-        {
-            ++currentLine;
-            if (currentLine < dialogue.Lines.Count)
+        localDialogue = receivingDialogue;
+    }
+
+    private void Update()
+    {
+        if (!isTyping) { 
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                StartCoroutine(TypeDialogue(dialogue.Lines[currentLine]));
-            }
-            else
-            {
-                currentLine = 0;
-                dialogueBox.SetActive(false);
-                OnCloseDialogue?.Invoke();
+                CloseDialogueBox();
             }
         }
+    }
+
+    public void CloseDialogueBox()
+    {
+        StopCoroutine(TypeDialogue(localDialogue.Lines[0]));
+        dialogueBox.SetActive(false);
     }
 
     public IEnumerator TypeDialogue(string line)
     {
         isTyping = true;
+        Debug.Log("Line should be: " +line);
         dialogueText.text = "";
         foreach (var letter in line.ToCharArray())
         {

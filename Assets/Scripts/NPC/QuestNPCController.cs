@@ -10,7 +10,11 @@ public class QuestNPCController : MonoBehaviour, Interactable
 
     public IEnumerator Interact()
     {
-        StartCoroutine(DialogueManager.Instance.ShowDialogue(dialogue));
+        Debug.Log("Dialogue is typing? " + DialogueManager.Instance.isTyping);
+        if (!DialogueManager.Instance.isTyping)
+            StartCoroutine(DialogueManager.Instance.ShowDialogue(dialogue));
+        //else
+        //    DialogueManager.Instance.CloseDialogueBox();
 
         if (quest == null)
         {
