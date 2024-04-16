@@ -906,6 +906,7 @@ MonoBehaviour:
   dialogue:
     lines:
     - Hi
+  QM: {fileID: 1875993568}
 --- !u!54 &1558475345
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1016,6 +1017,52 @@ Transform:
   m_LocalPosition: {x: 5, y: 2.2, z: -3.2677255}
   m_LocalScale: {x: 3.7775, y: 3.7775, z: 3.7775}
   m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1875993567
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1875993569}
+  - component: {fileID: 1875993568}
+  m_Layer: 0
+  m_Name: QuestManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1875993568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875993567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc4992b04d38e434c85dfaf8c0592cc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questList: []
+  player: {fileID: 254653773013049616}
+--- !u!4 &1875993569
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875993567}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.09, z: 7.79}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1311,6 +1358,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 254653773013049614}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &254653773013049616 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5626540214774647822, guid: 9ecbe9f40f8e8446cb02665ff73307cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 254653773013049614}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1324,3 +1377,4 @@ SceneRoots:
   - {fileID: 216539346}
   - {fileID: 125587836}
   - {fileID: 1930555445}
+  - {fileID: 1875993569}

@@ -7,6 +7,7 @@ public class QuestNPCController : MonoBehaviour, Interactable
 {
     public Quest quest;
     [SerializeField] Dialogue dialogue;
+    [SerializeField] QuestManager QM;
 
     public IEnumerator Interact()
     {
@@ -18,14 +19,17 @@ public class QuestNPCController : MonoBehaviour, Interactable
             yield break;
         }
 
-        if (!quest.isComplete)
+        if(!quest.isComplete)
         {
             Debug.Log(quest.startDialouge);
             Debug.Log("Quest not completed yet: " + quest.description);
+            QM.CompletionStatus();
+
         }
         else
         {
             Debug.Log(quest.endDialouge);
+            Debug.Log("U done");
         }
         
         yield return null;
