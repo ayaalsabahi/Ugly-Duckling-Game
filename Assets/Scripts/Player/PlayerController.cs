@@ -205,4 +205,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void duckEaten()
+    {
+        noDucksEaten++; 
+    }
 }

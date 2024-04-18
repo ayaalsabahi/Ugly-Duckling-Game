@@ -49,9 +49,10 @@ GameObject:
   - component: {fileID: 8006643420775718498}
   - component: {fileID: 5598333031534892113}
   - component: {fileID: 1842447511296197196}
+  - component: {fileID: 1672618116497393603}
   m_Layer: 0
-  m_Name: biggerDuck
-  m_TagString: biggerDuck
+  m_Name: fleeingDuck
+  m_TagString: EnemyRun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4967,10 +4968,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f6c69ad0e48b4950a4ae1c0b3aacd27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRadius: 5
-  enemyDistanceRun: 10
   player: {fileID: 5626540214774647822, guid: 9ecbe9f40f8e8446cb02665ff73307cd, type: 3}
+  detectionRadius: 10
+  enemyDistanceRun: 10
   fleematerial: {fileID: 2100000, guid: 62d2c8abcb6f84fdfb53bbc14b8a02d8, type: 2}
+  roamRadius: 10
+  roamTimer: 3
 --- !u!114 &5598333031534892113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5026,3 +5029,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!195 &1672618116497393603
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7022169548184598008}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5000001
+  m_Speed: 2
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
