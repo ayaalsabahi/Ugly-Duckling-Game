@@ -52,7 +52,7 @@ GameObject:
   - component: {fileID: 1672618116497393603}
   m_Layer: 0
   m_Name: fleeingDuck
-  m_TagString: biggerDuck
+  m_TagString: EnemyRun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4969,7 +4969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 5626540214774647822, guid: 9ecbe9f40f8e8446cb02665ff73307cd, type: 3}
-  detectionRadius: 5
+  detectionRadius: 10
   enemyDistanceRun: 10
   fleematerial: {fileID: 2100000, guid: 62d2c8abcb6f84fdfb53bbc14b8a02d8, type: 2}
   roamRadius: 10

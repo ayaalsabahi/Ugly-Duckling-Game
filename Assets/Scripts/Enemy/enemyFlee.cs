@@ -37,7 +37,7 @@ public class enemyFlee : MonoBehaviour
         isFlee = false;
         agent = GetComponent<NavMeshAgent>();
         timer = roamTimer;
-        SetRandomDestination();
+        if(gameObject.CompareTag("EnemyRun")) SetRandomDestination();
 
     }
 
@@ -55,13 +55,12 @@ public class enemyFlee : MonoBehaviour
             }
         }
         timer -= Time.deltaTime;
-        if (timer <= 0f) //when not in fleeing mode, roam around
+        if (timer <= 0f && gameObject.CompareTag("EnemyRun") && !isFlee) //when not in fleeing mode, roam around, I also have to be a EnemyRun Type
         {
             SetRandomDestination();
             timer = roamTimer;
         }
 
-        Debug.Log(timer);
         //we will use -1 as the layers for all layers to be included in the navmesh for now 
     }
 
@@ -113,7 +112,6 @@ public class enemyFlee : MonoBehaviour
     private void SetRandomDestination()
     {
         randomDestination = RandomSphere(transform.position, roamRadius, -1);
-        Debug.Log("New Destination: " + randomDestination);
         agent.SetDestination(randomDestination);
     }
 

@@ -1106,7 +1106,7 @@ PrefabInstance:
     - target: {fileID: 3652712524768837590, guid: 9ecbe9f40f8e8446cb02665ff73307cd,
         type: 3}
       propertyPath: detectionDistance
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5626540214774647822, guid: 9ecbe9f40f8e8446cb02665ff73307cd,
         type: 3}
@@ -2099,6 +2099,11 @@ PrefabInstance:
     - target: {fileID: 7022169548184598008, guid: ba0d4d2db976744a49f7bef113c522c7,
         type: 3}
       propertyPath: m_Name
+      value: biggerDuck
+      objectReference: {fileID: 0}
+    - target: {fileID: 7022169548184598008, guid: ba0d4d2db976744a49f7bef113c522c7,
+        type: 3}
+      propertyPath: m_TagString
       value: biggerDuck
       objectReference: {fileID: 0}
     m_RemovedComponents: []
