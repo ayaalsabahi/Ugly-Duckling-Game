@@ -44,7 +44,7 @@ public class QuestManager : MonoBehaviour
             }
             else if(quest.noDucksToEat != null)
             {
-                if(pc.noDucksEaten.ToString() == quest.noDucksToEat)
+                if(pc.noDucksEaten >= int.Parse(quest.noDucksToEat))
                 {
                     quest.isComplete = true;
                 }
