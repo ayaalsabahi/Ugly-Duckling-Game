@@ -6,7 +6,9 @@ public class BarrierManager : MonoBehaviour
 {
 
     [SerializeField]
-    public Quest quest;
+    public string questID;
+    [SerializeField]
+    public QuestManager QM;
     [SerializeField]
     public BoxCollider boxCollider;
 
@@ -19,9 +21,22 @@ public class BarrierManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      if(quest.isComplete)
+      foreach(Quest quest in QM.questList)
       {
-        boxCollider.enabled = false;
+        // if((questID == quest.questID) && (quest.isComplete))
+        // {
+        //   Debug.Log("open sesame");
+        //   boxCollider.enabled = false;
+        // }
+
+        if(questID == quest.questID)
+        {
+          QM.CompletionStatus();
+          if(quest.isComplete)
+          {
+            boxCollider.enabled = false;
+          }
+        }
       }  
     }
 }
