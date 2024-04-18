@@ -387,7 +387,8 @@ PrefabInstance:
       value: duck
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -8391222552659086748, guid: d677bd5e975f14db49e8c71db22a64fe, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d677bd5e975f14db49e8c71db22a64fe, type: 3}
