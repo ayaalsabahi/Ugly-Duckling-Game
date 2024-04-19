@@ -11,6 +11,8 @@ public class BarrierManager : MonoBehaviour
     public QuestManager QM;
     [SerializeField]
     public BoxCollider boxCollider;
+    [SerializeField]
+    public MeshRenderer meshRenderer;
 
     // Start is called before the first frame update
     void Start()
@@ -31,10 +33,13 @@ public class BarrierManager : MonoBehaviour
 
         if(questID == quest.questID)
         {
+          // Debug.Log("made it"+questID + "jj" + quest.questID);
           QM.CompletionStatus();
           if(quest.isComplete)
           {
+            Debug.Log("open sesame");
             boxCollider.enabled = false;
+            meshRenderer.enabled = false;
           }
         }
       }  

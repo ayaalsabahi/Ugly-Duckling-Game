@@ -16,10 +16,18 @@ public class QuestManager : MonoBehaviour
        pc = player.GetComponent<PlayerController>(); 
     }
 
+    void Awake()
+    {
+        foreach(Quest quest in questList)
+        {
+            quest.isComplete = false;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void CompletionStatus()
@@ -27,23 +35,24 @@ public class QuestManager : MonoBehaviour
         Debug.Log("checking staturs");
         foreach(Quest quest in questList)
         {
-            Debug.Log(quest.collectibleID);
-            if(quest.collectibleID != null)
+            Debug.Log("check" +quest.questID);
+            if(quest.collectibleID != "empty")
             {
                 if(pc.inventory.Contains(quest.collectibleID))
                 {
                     quest.isComplete = true;
                 }
             }
-            else if(quest.duckToEat != null)
+            else if(quest.duckToEat != "empty")
             {
                 if(pc.stomach.Contains(quest.duckToEat))
                 {
                     quest.isComplete = true;
                 }
             }
-            else if(quest.noDucksToEat != null)
+            else if(quest.noDucksToEat != "empty")
             {
+                Debug.Log("has to eat");
                 if(pc.noDucksEaten >= int.Parse(quest.noDucksToEat))
                 {
                     quest.isComplete = true;

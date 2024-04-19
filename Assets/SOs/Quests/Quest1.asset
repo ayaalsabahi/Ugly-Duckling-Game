@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b61c8ae629c6641a587b9755bcbbfe85, type: 3}
   m_Name: Quest1
   m_EditorClassIdentifier: 
-  questID: SaveBoy
-  collectibleID: 
-  duckToEat: 
+  questID: 1
+  collectibleID: empty
+  duckToEat: empty
   noDucksToEat: 1
   description: 
   startDialouge: Help can u save my son

@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b61c8ae629c6641a587b9755bcbbfe85, type: 3}
-  m_Name: TestQuest
+  m_Name: Quest3
   m_EditorClassIdentifier: 
-  questID: 0
+  questID: 3
   collectibleID: Hat
   duckToEat: empty
   noDucksToEat: empty
-  description: Get Hat
-  startDialouge: Hello
-  endDialouge: Thanks
+  description: 
+  startDialouge: Ur too ugly to pass
+  endDialouge: nice hat
   isComplete: 0

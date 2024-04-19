@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     public List<string> inventory = new List<string>();
     public List<string> stomach = new List<string>();
     public int noDucksEaten;
+    public QuestManager QM;
 
     //drawing the radius to see where the detection is
     private GameObject radiusVisual; // Declare the GameObject outside of any method
@@ -128,6 +129,7 @@ public class PlayerController : MonoBehaviour
 
     private void InteractEvent(InputAction.CallbackContext context)
     {
+        QM.CompletionStatus();
         StartCoroutine(InteractCoroutine());
         Debug.Log("lets eat");
     }
