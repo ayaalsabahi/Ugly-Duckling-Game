@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -341,27 +341,6 @@ Camera:
     type: 3}
   m_PrefabInstance: {fileID: 1288635956}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &55026829 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5251171915228464375, guid: 4798549833dc74fd1b9d4ffd8b0ac245,
-    type: 3}
-  m_PrefabInstance: {fileID: 112311585}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &55026835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55026829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f93b6dd4c0ffd4a979c4eb14e3421f41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueBox: {fileID: 1244921550}
-  dialogueText: {fileID: 422283780}
-  lettersPerSecond: 8
 --- !u!1001 &112311585
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2649,6 +2628,7 @@ MonoBehaviour:
   dialogue:
     lines:
     - Here is my dialogue!
+  QM: {fileID: 0}
 --- !u!1 &1730369699
 GameObject:
   m_ObjectHideFlags: 0

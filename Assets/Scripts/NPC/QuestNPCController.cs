@@ -11,6 +11,13 @@ public class QuestNPCController : MonoBehaviour, Interactable
 
     public IEnumerator Interact()
     {
+
+        Debug.Log("Dialogue is typing? " + DialogueManager.Instance.isTyping);
+        if (!DialogueManager.Instance.isTyping)
+            StartCoroutine(DialogueManager.Instance.ShowDialogue(dialogue));
+        //else
+        //    DialogueManager.Instance.CloseDialogueBox();
+
         if (quest == null)
         {
             Debug.Log("No quest assigned.");
@@ -32,13 +39,6 @@ public class QuestNPCController : MonoBehaviour, Interactable
             // Debug.Log("U done");
             dialogue.lines[0] = quest.endDialouge;
         }
-
-        Debug.Log("Dialogue is typing? " + DialogueManager.Instance.isTyping);
-        if (!DialogueManager.Instance.isTyping)
-            StartCoroutine(DialogueManager.Instance.ShowDialogue(dialogue));
-        //else
-        //    DialogueManager.Instance.CloseDialogueBox();
-
         
         yield return null;
     }

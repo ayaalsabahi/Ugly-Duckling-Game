@@ -31,10 +31,10 @@ public class DialogueManager : MonoBehaviour
     {
         SetDialogue(receivingDialogue);
 
-        yield return new WaitForEndOfFrame();
-
         dialogueBox.SetActive(true);
+
         StartCoroutine(TypeDialogue(receivingDialogue.Lines[0]));
+        yield return new WaitForEndOfFrame();
     }
 
     private void SetDialogue(Dialogue receivingDialogue)
@@ -44,7 +44,8 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (!isTyping) { 
+        if (!isTyping)
+        {
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 CloseDialogueBox();
@@ -54,7 +55,7 @@ public class DialogueManager : MonoBehaviour
 
     public void CloseDialogueBox()
     {
-        StopCoroutine(TypeDialogue(localDialogue.Lines[0]));
+        //StopCoroutine(TypeDialogue(localDialogue.Lines[0]));
         dialogueBox.SetActive(false);
     }
 
