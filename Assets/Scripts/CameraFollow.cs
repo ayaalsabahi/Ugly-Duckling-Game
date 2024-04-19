@@ -24,10 +24,10 @@ public class CameraFollow : MonoBehaviour
 
     //temporarily updating the camera
     public Transform playerTransform;
-    public float smoothing = 5f;
+    public float smoothing = 10f;
     public Vector3 offset = new Vector3(0f, 2f, -20f); //ffset to position the camera behind the player
 
-    private void LateUpdate()
+    private void FixedUpdate()
     {
         if (playerTransform != null)
         {
