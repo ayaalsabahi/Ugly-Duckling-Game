@@ -1881,7 +1881,7 @@ PrefabInstance:
     - target: {fileID: 462552392829435553, guid: 9ecbe9f40f8e8446cb02665ff73307cd,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 772.2822
+      value: 774
       objectReference: {fileID: 0}
     - target: {fileID: 462552392829435553, guid: 9ecbe9f40f8e8446cb02665ff73307cd,
         type: 3}
@@ -1891,7 +1891,7 @@ PrefabInstance:
     - target: {fileID: 462552392829435553, guid: 9ecbe9f40f8e8446cb02665ff73307cd,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 769.3005
+      value: 778
       objectReference: {fileID: 0}
     - target: {fileID: 462552392829435553, guid: 9ecbe9f40f8e8446cb02665ff73307cd,
         type: 3}
@@ -1928,6 +1928,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3652712524768837590, guid: 9ecbe9f40f8e8446cb02665ff73307cd,
+        type: 3}
+      propertyPath: detectionDistance
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5626540214774647822, guid: 9ecbe9f40f8e8446cb02665ff73307cd,
         type: 3}
       propertyPath: m_Name
@@ -1938,6 +1943,16 @@ PrefabInstance:
       propertyPath: QM
       value: 
       objectReference: {fileID: 1652843232}
+    - target: {fileID: 6608179485724027464, guid: 9ecbe9f40f8e8446cb02665ff73307cd,
+        type: 3}
+      propertyPath: maxSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6608179485724027464, guid: 9ecbe9f40f8e8446cb02665ff73307cd,
+        type: 3}
+      propertyPath: moveForce
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6608179485724027464, guid: 9ecbe9f40f8e8446cb02665ff73307cd,
         type: 3}
       propertyPath: playerCam

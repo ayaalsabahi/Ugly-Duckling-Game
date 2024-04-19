@@ -526,7 +526,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &385770402
 AudioListener:
   m_ObjectHideFlags: 0
@@ -990,6 +990,7 @@ MonoBehaviour:
   questID: 0
   QM: {fileID: 1875993568}
   boxCollider: {fileID: 1552755414}
+  meshRenderer: {fileID: 0}
 --- !u!1 &1558475343
 GameObject:
   m_ObjectHideFlags: 0
@@ -1221,9 +1222,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: CameraTarget
       objectReference: {fileID: 0}
+    - target: {fileID: 5923184016498093403, guid: 157fa7b1b22b64596b49c1d3e4a1afbd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6480531529012447087, guid: 157fa7b1b22b64596b49c1d3e4a1afbd,
         type: 3}
       propertyPath: target
+      value: 
+      objectReference: {fileID: 254653773013049615}
+    - target: {fileID: 6480531529012447087, guid: 157fa7b1b22b64596b49c1d3e4a1afbd,
+        type: 3}
+      propertyPath: playerTransform
       value: 
       objectReference: {fileID: 254653773013049615}
     m_RemovedComponents: []
@@ -1429,6 +1440,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerDuck
       objectReference: {fileID: 0}
+    - target: {fileID: 6608179485724027464, guid: 9ecbe9f40f8e8446cb02665ff73307cd,
+        type: 3}
+      propertyPath: QM
+      value: 
+      objectReference: {fileID: 1875993568}
     - target: {fileID: 6608179485724027464, guid: 9ecbe9f40f8e8446cb02665ff73307cd,
         type: 3}
       propertyPath: playerCam
