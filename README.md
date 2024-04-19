@@ -22,9 +22,8 @@ Beta Build:
 4.We still have to add in the final npc and environment assets and the last quests for a cohesive story
 
 Credits and attributions 
-resources used
-https://freesound.org/people/15FPanska_Hecl_Filip/sounds/461147/
-https://freesound.org/people/Planman/sounds/208111/
-the fog: https://github.com/etredal/FogTutorial/blob/main/Assets/Fog/ParticleCloudWhite.png
-https://freesound.org/people/CosmicEmbers/sounds/160757/
+- https://freesound.org/people/15FPanska_Hecl_Filip/sounds/461147/
+- https://freesound.org/people/Planman/sounds/208111/
+- the fog: https://github.com/etredal/FogTutorial/blob/main/Assets/Fog/ParticleCloudWhite.png
+- https://freesound.org/people/CosmicEmbers/sounds/160757/
 
