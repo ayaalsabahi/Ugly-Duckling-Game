@@ -1938,6 +1938,26 @@ PrefabInstance:
       propertyPath: playerCam
       value: 
       objectReference: {fileID: 1878343167}
+    - target: {fileID: 6815578096696966691, guid: 9ecbe9f40f8e8446cb02665ff73307cd,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.8492768
+      objectReference: {fileID: 0}
+    - target: {fileID: 6815578096696966691, guid: 9ecbe9f40f8e8446cb02665ff73307cd,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 1.3407452
+      objectReference: {fileID: 0}
+    - target: {fileID: 6815578096696966691, guid: 9ecbe9f40f8e8446cb02665ff73307cd,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 1.0109825
+      objectReference: {fileID: 0}
+    - target: {fileID: 6815578096696966691, guid: 9ecbe9f40f8e8446cb02665ff73307cd,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.462208
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1963,6 +1983,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5329710836010493652, guid: d557543c290fb40e289f4a23d80d1e83,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: f108ef1fe2cb04b0abbcb67f851f0ef5,
+        type: 2}
     - target: {fileID: 5795944373222202167, guid: d557543c290fb40e289f4a23d80d1e83,
         type: 3}
       propertyPath: m_Enabled
