@@ -8,6 +8,9 @@ public class QuestNPCController : MonoBehaviour, Interactable
     public Quest quest;
     [SerializeField] Dialogue dialogue;
     [SerializeField] QuestManager QM;
+    [SerializeField] public bool isBlockingDuck;
+    [SerializeField] public float moveDistance;
+    private int moveTimes;
 
     public IEnumerator Interact()
     {
@@ -38,6 +41,10 @@ public class QuestNPCController : MonoBehaviour, Interactable
             Debug.Log("2"+quest.endDialouge);
             // Debug.Log("U done");
             dialogue.lines[0] = quest.endDialouge;
+            if(isBlockingDuck && moveTimes == 0)
+            {
+                
+            }
         }
         
         yield return null;
