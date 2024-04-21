@@ -17,21 +17,28 @@ public class enemyFlee : MonoBehaviour
         - they run away from the player as it gets closer to them if flee mode is activated; 
      */
 
-    private bool isFlee;
-    public GameObject player;
-
+    private NavMeshAgent agent;
+  
     
+    public Transform player;
+
+    [Header("For suspicious")]
+    public bool isSuspicous;
+    public Material suspiciousMaterial;
+    public float suspiciousSpeed; 
+
     [Header("For fleeing")]
     public float detectionRadius; //this distance is for the 'eating' being visible versus not 
-    private NavMeshAgent agent;
+    private bool isFlee;
     public float enemyDistanceRun = 5f;
-    public Material fleematerial; //temporary color change when fleeing
-    public float moveSpeed;
+    public Material fleeMaterial; //temporary color change when fleeing
+    public float fleeDistance = 30f; // Distance at which the object starts fleeing
+    public float fleeingSpeed; 
 
     //not fleeing
     [Header("For not fleeing")]
     public float roamRadius = 10f;
-    public float roamTimer = 5f; //every how many seconds change positions
+    public float roamTimer = 1000f; //every how many seconds change positions
     private float timer; //temporary variable
     private Vector3 randomDestination;
 
@@ -48,17 +55,27 @@ public class enemyFlee : MonoBehaviour
 
     private void Update()
     {
-        isNear(); //check if player is near me 
-        if (isFlee)
+        
+        if (isSuspicous || isFlee) //if suspicious or fleeing, run away
         {
-            float distance = Vector3.Distance(transform.position, player.transform.position);
+            float distance = Vector3.Distance(gameObject.transform.position, player.position);
 
-            
-                Vector3 dirToPlayer = transform.position - player.transform.position;
-                Vector3 normalizedDirToPlayer = dirToPlayer.normalized;
-                Vector3 newPos = transform.position + normalizedDirToPlayer * moveSpeed;
 
-                agent.SetDestination(newPos); //run away from the player 
+            if (distance < fleeDistance)
+            {
+                // Calculate the direction away from the player
+                Vector3 fleeDirection = transform.position - player.position;
+
+                // Normalize the flee direction
+                fleeDirection.Normalize();
+
+                // Calculate the destination position to flee to
+                Vector3 fleePosition = gameObject.transform.position + fleeDirection * fleeDistance;
+
+                // Set the destination for the NavMeshAgent to flee to
+                agent.SetDestination(fleePosition);
+                Debug.Log(fleePosition);
+            }
         }
         else
         {
@@ -84,6 +101,7 @@ public class enemyFlee : MonoBehaviour
         {
             if (collider.CompareTag("Player") && !GameManager.Instance.isHidden) // as well as the object not being hidden 
             {
+                Debug.Log("reached fleeing mode;");
                 fleeMode();
             }
         }
@@ -92,8 +110,18 @@ public class enemyFlee : MonoBehaviour
     public void fleeMode()
     {
         isFlee = true;
-        Renderer renderer = gameObject.GetComponent<Renderer>();
-        renderer.material = fleematerial; //change the color of the duck
+        Renderer renderer = gameObject.GetComponent<Renderer>(); //change color to red
+        renderer.material = fleeMaterial; //change the color of the duck
+        agent.speed = fleeingSpeed; 
+    }
+
+    public void SusMode()
+    {
+        isSuspicous = true;
+        agent.speed = suspiciousSpeed;
+        Renderer renderer = gameObject.GetComponent<Renderer>(); //change color to red
+        renderer.material = suspiciousMaterial; //change the color of the duck
+        //change color to yellow 
     }
 
     private void OnDrawGizmosSelected()

@@ -160,7 +160,7 @@ MonoBehaviour:
   maxEat: 5
   biggerAbility: {fileID: 11400000, guid: ed30aab35085d44d9af3c62f24e2223b, type: 2}
   duckEaten: {fileID: 11400000, guid: f33d79e5b6fd0469f8b61e6f761476ec, type: 2}
-  runningAbility: {fileID: 11400000, guid: 386c0dadce280472a811da7159b2b69f, type: 2}
+  smallBite: {fileID: 11400000, guid: b5b9221a77b5740c9b69bba6dd8f749a, type: 2}
 --- !u!198 &5713379148675076489
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -4970,11 +4970,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f6c69ad0e48b4950a4ae1c0b3aacd27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 5626540214774647822, guid: 9ecbe9f40f8e8446cb02665ff73307cd, type: 3}
+  player: {fileID: 462552392829435553, guid: 9ecbe9f40f8e8446cb02665ff73307cd, type: 3}
+  isSuspicous: 0
+  suspiciousMaterial: {fileID: 2100000, guid: 62d2c8abcb6f84fdfb53bbc14b8a02d8, type: 2}
+  suspiciousSpeed: 10
   detectionRadius: 50
   enemyDistanceRun: 3
-  fleematerial: {fileID: 2100000, guid: 62d2c8abcb6f84fdfb53bbc14b8a02d8, type: 2}
-  moveSpeed: 10000
+  fleeMaterial: {fileID: 2100000, guid: dba4c2518d29b488a9392394befd42ec, type: 2}
+  fleeDistance: 30
+  fleeingSpeed: 20
   roamRadius: 10
   roamTimer: 3
   fleeModeEvent: {fileID: 11400000, guid: 2104d965c416646478f0594cffc3cfbb, type: 2}
@@ -5014,8 +5018,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7022169548184598008}
   serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
+  m_Mass: 3
+  m_Drag: 1
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -5043,7 +5047,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5000001
-  m_Speed: 4
+  m_Speed: 100
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120

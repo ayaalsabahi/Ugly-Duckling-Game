@@ -17,7 +17,8 @@ public class eatController : MonoBehaviour
     [Header("Events")]
     public GameEvent biggerAbility;
     public GameEvent duckEaten;
-    public GameEvent runningAbility; //run away from the player once the player has taken a bite
+    public GameEvent smallBite; 
+    
 
     private enemyFlee enemyFleeScriptLocal; 
 
@@ -42,9 +43,10 @@ public class eatController : MonoBehaviour
 
     public void Activate()
     {
-        Debug.Log("I am an activated duck, tag:"+ gameObject.tag);
+        
         particleSystemEnemy.Play();
         eatCount++;
+        smallBite.Raise();
         if (eatCount == maxEat)
         {
             duckEaten.Raise();
@@ -62,7 +64,7 @@ public class eatController : MonoBehaviour
         if (gameObject.CompareTag("EnemyRun"))
         {
             //now I'm suspicious and want to run away
-            enemyFleeScriptLocal.fleeMode();
+            enemyFleeScriptLocal.SusMode();
         }
     }
 
