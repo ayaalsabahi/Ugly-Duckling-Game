@@ -6,7 +6,8 @@ public class eatController : MonoBehaviour
 {
 
     /*
-        Attatch this to any enemy that would be eaten, this solely takes care of the 
+        Attatch this to any enemy that would be eaten, this solely takes care of
+        checking what type of object is being eaten as well as raising the corresponding event related to it
      */ 
     private ParticleSystem particleSystemEnemy;
     private int eatCount = 0; //this tells us how many times space was pressed
@@ -14,7 +15,8 @@ public class eatController : MonoBehaviour
 
     [Header("Events")]
     public GameEvent biggerAbility;
-    public GameEvent duckEaten; 
+    public GameEvent duckEaten;
+    public GameEvent runningAbility; //run away from the player once the player has taken a bite
 
     private void Start()
     {
@@ -54,7 +56,7 @@ public class eatController : MonoBehaviour
 
             if (gameObject.CompareTag("EnemyRun"))
             {
-                Debug.Log("Run away");
+                runningAbility.Raise();
             }
         }
     }

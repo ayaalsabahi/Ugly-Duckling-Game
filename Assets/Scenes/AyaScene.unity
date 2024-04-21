@@ -313,6 +313,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CameraTarget
       objectReference: {fileID: 0}
+    - target: {fileID: 6480531529012447087, guid: 157fa7b1b22b64596b49c1d3e4a1afbd,
+        type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 1281246063}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -770,6 +775,7 @@ MonoBehaviour:
   inventory: []
   stomach: []
   noDucksEaten: 0
+  QM: {fileID: 0}
 --- !u!54 &698514324
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2149,6 +2155,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3348447763747865787, guid: ba0d4d2db976744a49f7bef113c522c7,
+        type: 3}
+      propertyPath: runningAbility
+      value: 
+      objectReference: {fileID: 11400000, guid: 386c0dadce280472a811da7159b2b69f,
+        type: 2}
     - target: {fileID: 5713379148675076489, guid: ba0d4d2db976744a49f7bef113c522c7,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.b

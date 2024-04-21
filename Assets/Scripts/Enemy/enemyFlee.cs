@@ -32,6 +32,8 @@ public class enemyFlee : MonoBehaviour
     private float timer; //temporary variable
     private Vector3 randomDestination;
 
+    public GameEvent fleeModeEvent;
+
     private void Start()
     {
         isFlee = false;
@@ -78,6 +80,7 @@ public class enemyFlee : MonoBehaviour
             {
                 
                 fleeMode();
+
                 
             }
         }
@@ -91,6 +94,8 @@ public class enemyFlee : MonoBehaviour
         isFlee = true;
         Renderer renderer = gameObject.GetComponent<Renderer>();
         renderer.material = fleematerial; //change the color of the duck
+        
+        //add code here 
     }
 
 
