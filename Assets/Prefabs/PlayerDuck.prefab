@@ -175,6 +175,7 @@ MonoBehaviour:
   inventory: []
   stomach: []
   noDucksEaten: 0
+  QM: {fileID: 0}
 --- !u!114 &142720545831229167
 MonoBehaviour:
   m_ObjectHideFlags: 0

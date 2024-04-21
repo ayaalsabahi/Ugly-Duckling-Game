@@ -20,13 +20,16 @@ public class enemyFlee : MonoBehaviour
     private bool isFlee;
     public GameObject player;
 
-    //for fleeing 
+    
+    [Header("For fleeing")]
     public float detectionRadius; //this distance is for the 'eating' being visible versus not 
     private NavMeshAgent agent;
     public float enemyDistanceRun = 5f;
     public Material fleematerial; //temporary color change when fleeing
+    public float moveSpeed;
 
-    //not fleeing 
+    //not fleeing
+    [Header("For not fleeing")]
     public float roamRadius = 10f;
     public float roamTimer = 5f; //every how many seconds change positions
     private float timer; //temporary variable
@@ -50,12 +53,12 @@ public class enemyFlee : MonoBehaviour
         {
             float distance = Vector3.Distance(transform.position, player.transform.position);
 
-            if(distance < enemyDistanceRun)
-            {
+            
                 Vector3 dirToPlayer = transform.position - player.transform.position;
-                Vector3 newPos = transform.position + dirToPlayer;
+                Vector3 normalizedDirToPlayer = dirToPlayer.normalized;
+                Vector3 newPos = transform.position + normalizedDirToPlayer * moveSpeed;
+
                 agent.SetDestination(newPos); //run away from the player 
-            }
         }
         else
         {
@@ -81,24 +84,16 @@ public class enemyFlee : MonoBehaviour
         {
             if (collider.CompareTag("Player") && !GameManager.Instance.isHidden) // as well as the object not being hidden 
             {
-                
                 fleeMode();
-
-                
             }
         }
-
-       
     }
 
     public void fleeMode()
     {
-        Debug.Log("flee mode is called");
         isFlee = true;
         Renderer renderer = gameObject.GetComponent<Renderer>();
         renderer.material = fleematerial; //change the color of the duck
-        
-        //add code here 
     }
 
     private void OnDrawGizmosSelected()

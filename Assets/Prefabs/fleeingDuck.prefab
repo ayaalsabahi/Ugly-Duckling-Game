@@ -4974,6 +4974,7 @@ MonoBehaviour:
   detectionRadius: 50
   enemyDistanceRun: 3
   fleematerial: {fileID: 2100000, guid: 62d2c8abcb6f84fdfb53bbc14b8a02d8, type: 2}
+  moveSpeed: 10000
   roamRadius: 10
   roamTimer: 3
   fleeModeEvent: {fileID: 11400000, guid: 2104d965c416646478f0594cffc3cfbb, type: 2}
