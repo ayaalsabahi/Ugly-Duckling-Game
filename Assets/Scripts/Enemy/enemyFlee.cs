@@ -45,6 +45,7 @@ public class enemyFlee : MonoBehaviour
 
     private void Update()
     {
+        isNear(); //check if player is near me 
         if (isFlee)
         {
             float distance = Vector3.Distance(transform.position, player.transform.position);
@@ -53,24 +54,26 @@ public class enemyFlee : MonoBehaviour
             {
                 Vector3 dirToPlayer = transform.position - player.transform.position;
                 Vector3 newPos = transform.position + dirToPlayer;
-                agent.SetDestination(newPos);
+                agent.SetDestination(newPos); //run away from the player 
             }
         }
-        timer -= Time.deltaTime;
-        if (timer <= 0f && gameObject.CompareTag("EnemyRun") && !isFlee) //when not in fleeing mode, roam around, I also have to be a EnemyRun Type
+        else
         {
-            SetRandomDestination();
-            timer = roamTimer;
+            timer -= Time.deltaTime;
+            if (timer <= 0f && gameObject.CompareTag("EnemyRun") && !isFlee) //find new position if not fleeing
+            {
+                SetRandomDestination();
+                timer = roamTimer;
+
+            }
+
         }
 
-        //we will use -1 as the layers for all layers to be included in the navmesh for now 
     }
-
 
     //get all the objects that are near me and check if any of the objects nearby is the player
     public void isNear()
     {
-        
         Collider[] colliders = Physics.OverlapSphere(transform.position, detectionRadius);
 
         // Loop through all the colliders that intersect with the sphere
@@ -88,7 +91,7 @@ public class enemyFlee : MonoBehaviour
        
     }
 
-    private void fleeMode()
+    public void fleeMode()
     {
         Debug.Log("flee mode is called");
         isFlee = true;
@@ -98,13 +101,11 @@ public class enemyFlee : MonoBehaviour
         //add code here 
     }
 
-
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, detectionRadius);
     }
-
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -127,6 +128,7 @@ public class enemyFlee : MonoBehaviour
         NavMeshHit navHit;
         NavMesh.SamplePosition(dirRand, out navHit, dist, layers); 
         return navHit.position;
-
     }
+
+
 }

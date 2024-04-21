@@ -661,6 +661,8 @@ MonoBehaviour:
     lines:
     - Hi
   QM: {fileID: 1652843232}
+  isBlockingDuck: 0
+  moveDistance: 0
 --- !u!54 &934551942
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1313,6 +1315,8 @@ MonoBehaviour:
     lines:
     - Hi
   QM: {fileID: 1652843232}
+  isBlockingDuck: 0
+  moveDistance: 0
 --- !u!54 &1383142698
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2113,7 +2117,7 @@ PrefabInstance:
     - target: {fileID: 3652712524768837590, guid: 9ecbe9f40f8e8446cb02665ff73307cd,
         type: 3}
       propertyPath: detectionDistance
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5626540214774647822, guid: 9ecbe9f40f8e8446cb02665ff73307cd,
         type: 3}
@@ -2140,6 +2144,11 @@ PrefabInstance:
       propertyPath: playerCam
       value: 
       objectReference: {fileID: 1878343167}
+    - target: {fileID: 6608179485724027464, guid: 9ecbe9f40f8e8446cb02665ff73307cd,
+        type: 3}
+      propertyPath: detectionDistance
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6815578096696966691, guid: 9ecbe9f40f8e8446cb02665ff73307cd,
         type: 3}
       propertyPath: m_Size.y

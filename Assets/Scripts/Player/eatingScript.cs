@@ -10,8 +10,6 @@ public class eatingScript : MonoBehaviour
      The edible object type must have a 'eatController' script and particleSystem attached to it.
      */
     public float detectionDistance; // Maximum distance for detection
-    private GameObject currentEnemy = null; // Reference to the current enemy
-    private eatController eatContLocal;
 
     private List<GameObject> currentEnemies = new List<GameObject>(); // List to store references to current enemies
     private List<eatController> eatContLocals = new List<eatController>(); // List to store references to eatController components
@@ -31,6 +29,7 @@ public class eatingScript : MonoBehaviour
 
                 if (index < eatContLocals.Count) //sanity check 
                 {
+                    Debug.Log("Small bite here");
                     eatContLocals[index].Activate(); // Activate eatController for the current enemy
                 }
                 // Add sound activation code here if needed

@@ -8,6 +8,7 @@ public class eatController : MonoBehaviour
     /*
         Attatch this to any enemy that would be eaten, this solely takes care of
         checking what type of object is being eaten as well as raising the corresponding event related to it
+        also controlling the particle system & how many ducks need to be eaten
      */ 
     private ParticleSystem particleSystemEnemy;
     private int eatCount = 0; //this tells us how many times space was pressed
@@ -18,9 +19,13 @@ public class eatController : MonoBehaviour
     public GameEvent duckEaten;
     public GameEvent runningAbility; //run away from the player once the player has taken a bite
 
+    private enemyFlee enemyFleeScriptLocal; 
+
+
     private void Start()
     {
         particleSystemEnemy = GetComponent<ParticleSystem>();
+        enemyFleeScriptLocal = GetComponent<enemyFlee>();
 
         if (particleSystemEnemy == null)
         {
@@ -47,17 +52,17 @@ public class eatController : MonoBehaviour
 
             
             if (gameObject.CompareTag("biggerDuck") ) //different ducks give different abilities
-                                                    //pass it onto the level manager to say
-                                                    //that you got a certain ability & the level manager handles it
-            {
+                                                        //pass it onto the level manager to say
+                                                        //that you got a certain ability & the level manager handles it
+                {
                 biggerAbility.Raise();
                 
             }
-
-            if (gameObject.CompareTag("EnemyRun"))
-            {
-                runningAbility.Raise();
-            }
+        }
+        if (gameObject.CompareTag("EnemyRun"))
+        {
+            //now I'm suspicious and want to run away
+            enemyFleeScriptLocal.fleeMode();
         }
     }
 

@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 5598333031534892113}
   - component: {fileID: 1842447511296197196}
   - component: {fileID: 1672618116497393603}
+  - component: {fileID: 1975847527954339963}
   m_Layer: 0
   m_Name: fleeingDuck
   m_TagString: EnemyRun
@@ -4971,7 +4972,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 5626540214774647822, guid: 9ecbe9f40f8e8446cb02665ff73307cd, type: 3}
   detectionRadius: 50
-  enemyDistanceRun: 10
+  enemyDistanceRun: 3
   fleematerial: {fileID: 2100000, guid: 62d2c8abcb6f84fdfb53bbc14b8a02d8, type: 2}
   roamRadius: 10
   roamTimer: 3
@@ -5053,3 +5054,31 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1975847527954339963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7022169548184598008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06ed7bed0d7c4bbdaa0434dc24ebd7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 386c0dadce280472a811da7159b2b69f, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8006643420775718498}
+        m_TargetAssemblyTypeName: enemyFlee, Assembly-CSharp
+        m_MethodName: fleeMode
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
