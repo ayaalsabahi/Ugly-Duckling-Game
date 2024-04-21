@@ -18,11 +18,11 @@ public class eatingScript : MonoBehaviour
     {
         if (LookEnemy() && Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Player is looking at enemies and pressed 'Space'!");
+            
 
             foreach (GameObject enemy in currentEnemies)
             {
-                Debug.Log("Activated the eating controller");
+                
                 int index = currentEnemies.IndexOf(enemy);
 
                 if (currentEnemies.Count != eatContLocals.Count) Debug.Log("two lists are not the same length in eating script");

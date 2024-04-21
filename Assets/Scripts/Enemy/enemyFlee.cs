@@ -47,6 +47,7 @@ public class enemyFlee : MonoBehaviour
     private void Start()
     {
         isFlee = false;
+        isSuspicous = false;
         agent = GetComponent<NavMeshAgent>();
         timer = roamTimer;
         if(gameObject.CompareTag("EnemyRun")) SetRandomDestination();
@@ -74,7 +75,6 @@ public class enemyFlee : MonoBehaviour
 
                 // Set the destination for the NavMeshAgent to flee to
                 agent.SetDestination(fleePosition);
-                Debug.Log(fleePosition);
             }
         }
         else
@@ -112,16 +112,21 @@ public class enemyFlee : MonoBehaviour
         isFlee = true;
         Renderer renderer = gameObject.GetComponent<Renderer>(); //change color to red
         renderer.material = fleeMaterial; //change the color of the duck
-        agent.speed = fleeingSpeed; 
+        agent.speed = fleeingSpeed;
+        fleeModeEvent.Raise();
     }
 
     public void SusMode()
     {
         isSuspicous = true;
         agent.speed = suspiciousSpeed;
-        Renderer renderer = gameObject.GetComponent<Renderer>(); //change color to red
-        renderer.material = suspiciousMaterial; //change the color of the duck
-        //change color to yellow 
+        if (!isFlee)
+        {
+            Renderer renderer = gameObject.GetComponent<Renderer>(); //change color to red
+            renderer.material = suspiciousMaterial; //change the color of the duck
+        }
+        
+       
     }
 
     private void OnDrawGizmosSelected()
