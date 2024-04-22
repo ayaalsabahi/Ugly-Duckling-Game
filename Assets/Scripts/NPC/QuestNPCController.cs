@@ -43,11 +43,17 @@ public class QuestNPCController : MonoBehaviour, Interactable
             dialogue.lines[0] = quest.endDialouge;
             if(isBlockingDuck && moveTimes == 0)
             {
-                
+                Move();   
             }
         }
         
         yield return null;
+    }
+
+    public void Move()
+    {
+        transform.position += Vector3.left * moveDistance;
+        moveTimes++;
     }
 
 

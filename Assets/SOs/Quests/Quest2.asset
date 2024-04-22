@@ -16,7 +16,7 @@ MonoBehaviour:
   collectibleID: empty
   duckToEat: empty
   noDucksToEat: 5
-  description: 
+  description: Eat 5 ducks to get bigger
   startDialouge: 
   endDialouge: 
   isComplete: 0

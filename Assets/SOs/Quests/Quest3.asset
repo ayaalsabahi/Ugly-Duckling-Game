@@ -16,7 +16,7 @@ MonoBehaviour:
   collectibleID: Hat
   duckToEat: empty
   noDucksToEat: empty
-  description: 
-  startDialouge: Ur too ugly to pass
-  endDialouge: nice hat
+  description: Eat the Hat duck to get his hat
+  startDialouge: You're too ugly to pass
+  endDialouge: Nice hat good lookin who are you
   isComplete: 0
