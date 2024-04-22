@@ -1029,6 +1029,8 @@ MonoBehaviour:
     lines:
     - Hi
   QM: {fileID: 1875993568}
+  isBlockingDuck: 1
+  moveDistance: 2
 --- !u!54 &1558475345
 Rigidbody:
   m_ObjectHideFlags: 0
