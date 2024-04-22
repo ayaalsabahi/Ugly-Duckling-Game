@@ -29,7 +29,7 @@ public class DuckSound : MonoBehaviour
         fleeSource.maxDistance = maxVolumeDistance;
 
         quackSource.loop = true;
-        fleeSource.loop = true; 
+        fleeSource.loop = true;
 
     }
 
