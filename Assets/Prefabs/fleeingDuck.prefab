@@ -5102,6 +5102,11 @@ PrefabInstance:
     - target: {fileID: 2715197370275687535, guid: 4e90b73118d7d4c0280f7ee9c7d52e3e,
         type: 3}
       propertyPath: m_FillAmount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120192431338675363, guid: 4e90b73118d7d4c0280f7ee9c7d52e3e,
+        type: 3}
+      propertyPath: m_FillAmount
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4191315414277998091, guid: 4e90b73118d7d4c0280f7ee9c7d52e3e,
@@ -5224,6 +5229,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthBarDuck
       objectReference: {fileID: 0}
+    - target: {fileID: 6497346222694901870, guid: 4e90b73118d7d4c0280f7ee9c7d52e3e,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6497346222694901870, guid: 4e90b73118d7d4c0280f7ee9c7d52e3e,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7286326912632034195, guid: 4e90b73118d7d4c0280f7ee9c7d52e3e,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -5262,7 +5277,7 @@ PrefabInstance:
     - target: {fileID: 8959190360802015074, guid: 4e90b73118d7d4c0280f7ee9c7d52e3e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.024
+      value: -0.024002075
       objectReference: {fileID: 0}
     - target: {fileID: 9218680487308173398, guid: 4e90b73118d7d4c0280f7ee9c7d52e3e,
         type: 3}
