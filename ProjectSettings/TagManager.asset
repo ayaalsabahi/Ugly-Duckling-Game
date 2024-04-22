@@ -8,6 +8,7 @@ TagManager:
   - EnemyRun
   - Weeds
   - Barrier
+  - Police
   layers:
   - Default
   - TransparentFX

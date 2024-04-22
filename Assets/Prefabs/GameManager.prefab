@@ -54,6 +54,8 @@ MonoBehaviour:
   newScale: {x: 2, y: 2, z: 2}
   isHidden: 0
   detectionRadius: 0
+  timeNeeded: 3
+  doneHiding: {fileID: 11400000, guid: 89a9be92a8f1a42a2a45a3811f83a57d, type: 2}
 --- !u!114 &1726613222057977114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,3 +155,4 @@ MonoBehaviour:
   dialogueBox: {fileID: 0}
   dialogueText: {fileID: 0}
   lettersPerSecond: 3
+  isTyping: 0

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 259631287024782834}
   - component: {fileID: 3652712524768837590}
   - component: {fileID: 6608179485724027464}
+  - component: {fileID: 7772246012655215683}
   - component: {fileID: 142720545831229167}
   m_Layer: 0
   m_Name: PlayerDuck
@@ -176,6 +177,20 @@ MonoBehaviour:
   stomach: []
   noDucksEaten: 0
   QM: {fileID: 0}
+--- !u!114 &7772246012655215683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5626540214774647822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b4621f09280b441d8e9cd60a6a433b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftWeeds: {fileID: 11400000, guid: 8515ac9ff55694a50824271bc170ce46, type: 2}
+  enteredWeeds: {fileID: 11400000, guid: 78e76df6a63f04eaa931a8f219cffde7, type: 2}
 --- !u!114 &142720545831229167
 MonoBehaviour:
   m_ObjectHideFlags: 0

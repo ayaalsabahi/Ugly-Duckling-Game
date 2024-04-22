@@ -25,8 +25,13 @@ public class GameManager : MonoBehaviour
     public Vector3 newScale = new Vector3(2f, 2f, 2f); // New scale for the object
 
     public bool isHidden = false; //refers to whether we are in the weeds or not 
-    public float detectionRadius; 
-    
+    public float detectionRadius;
+
+    [Header("Timer things")]
+    public float timeNeeded;
+    private float timeAccumelated; 
+    public GameEvent doneHiding; 
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -35,11 +40,30 @@ public class GameManager : MonoBehaviour
             return;
         }
         Instance = this;
+
+
     }
+
+    private void Update()
+    {
+        if (isHidden)
+        {
+            timeAccumelated += Time.deltaTime;
+            if(timeAccumelated >= timeNeeded)
+            {
+                doneHiding.Raise(); 
+            }
+        }
+
+        else
+        {
+            timeAccumelated = 0; 
+        }
+    }
+
 
     public void Hiding() //hidding in the weeds
     {
-
         isHidden = true;
     }
 
@@ -59,8 +83,8 @@ public class GameManager : MonoBehaviour
         //renderer.material = newMaterial; //change the color of the duck
 
 
-        Collider collider = greenery1.GetComponent<Collider>();
-        collider.isTrigger = true; //change the ability to pass through greenery
+        //Collider collider = greenery1.GetComponent<Collider>();
+        //collider.isTrigger = true; //change the ability to pass through greenery
 
         Transform transform = mainDuck.transform;
         transform.localScale = newScale; //change the object scale 
