@@ -13,6 +13,7 @@ public class DetectCollisionPlayer : MonoBehaviour
     {
         if (other.CompareTag("Weeds"))
         {
+            Debug.Log("Entered weeds");
             enteredWeeds.Raise();
         }
     }
@@ -22,6 +23,7 @@ public class DetectCollisionPlayer : MonoBehaviour
     {
         if (other.CompareTag("Weeds"))
         {
+            Debug.Log("Exit weeds");
             leftWeeds.Raise();
         }
     }
