@@ -11,7 +11,7 @@ public class eatController : MonoBehaviour
         also controlling the particle system & how many ducks need to be eaten
      */ 
     private ParticleSystem particleSystemEnemy;
-    private int eatCount = 0; //this tells us how many times space was pressed
+    public int eatCount = 0; //this tells us how many times space was pressed
     public int maxEat = 5; //number of times to press before an object gets eaten
 
     [Header("Events")]
@@ -51,6 +51,10 @@ public class eatController : MonoBehaviour
         if (eatCount == maxEat)
         {
             duckEaten.Raise();
+            if(item != null)
+            {
+                GameObject.Find("PlayerDuck").GetComponent<PlayerController>().AddToInventory(item.collectibleID);
+            }
             Destroy(gameObject);
 
             

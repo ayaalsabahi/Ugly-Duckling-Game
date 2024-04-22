@@ -9,8 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91b78097bae964654b005c4bfed2b33b, type: 3}
-  m_Name: NewCollectible
+  m_Script: {fileID: 11500000, guid: b61c8ae629c6641a587b9755bcbbfe85, type: 3}
+  m_Name: Quest4
   m_EditorClassIdentifier: 
-  collectibleID: Shades
-  icon: {fileID: 0}
+  questID: 4
+  collectibleID: empty
+  duckToEat: empty
+  noDucksToEat: 11
+  description: Eat 6 more ducks to get bigger
+  startDialouge: 
+  endDialouge: 
+  isComplete: 0

@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b61c8ae629c6641a587b9755bcbbfe85, type: 3}
-  m_Name: Quest1
+  m_Name: Quest5
   m_EditorClassIdentifier: 
-  questID: 1
-  collectibleID: empty
+  questID: 5
+  collectibleID: Shades
   duckToEat: empty
-  noDucksToEat: 1
-  description: Free son by eating duck and getting bigger
-  startDialouge: Help can u save my son
-  endDialouge: Thanks for freeing him
+  noDucksToEat: empty
+  description: Eat the shades duck in order get shades
+  startDialouge: Nice hat but you're still not cool enough to hang with us
+  endDialouge: Wow shades  I guess you are cool
   isComplete: 0
