@@ -23,6 +23,7 @@ public class eatController : MonoBehaviour
     public Collectible item;
 
     private enemyFlee enemyFleeScriptLocal;
+    private DuckSound duckSoundLocal; 
     public Slider duckSlider; 
 
     private void Start()
@@ -50,7 +51,8 @@ public class eatController : MonoBehaviour
         particleSystemEnemy.Play();
         eatCount++;
         smallBite.Raise();
-        duckSlider.value -= 1; 
+        duckSlider.value -= 1;
+        
         if (eatCount == maxEat)
         {
             duckEaten.Raise();
@@ -73,6 +75,7 @@ public class eatController : MonoBehaviour
         {
             //now I'm suspicious and want to run away
             enemyFleeScriptLocal.SusMode();
+           
         }
     }
 

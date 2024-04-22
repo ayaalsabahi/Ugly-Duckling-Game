@@ -14,6 +14,8 @@ public class eatingScript : MonoBehaviour
     private List<GameObject> currentEnemies = new List<GameObject>(); // List to store references to current enemies
     private List<eatController> eatContLocals = new List<eatController>(); // List to store references to eatController components
 
+    
+
     private void Update()
     {
         if (LookEnemy() && Input.GetKeyDown(KeyCode.Space))

@@ -51,6 +51,7 @@ GameObject:
   - component: {fileID: 1842447511296197196}
   - component: {fileID: 1672618116497393603}
   - component: {fileID: 1975847527954339963}
+  - component: {fileID: 9178841966691380526}
   m_Layer: 0
   m_Name: fleeingDuck
   m_TagString: EnemyRun
@@ -5091,6 +5092,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &9178841966691380526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7022169548184598008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 465ff2c2ab3cd48089f14829d3b4ed79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quackingDuck: {fileID: 8300000, guid: daf0b7a409b4f479f9d8c480b015d573, type: 3}
+  fleeDuck: {fileID: 8300000, guid: 0462acc5153ab4a46a1a7f4f31fe6b6e, type: 3}
+  player: {fileID: 0}
+  minVolumeDistance: 1
+  maxVolumeDistance: 100
+  maxVolume: 1
 --- !u!1001 &2806831244214526658
 PrefabInstance:
   m_ObjectHideFlags: 0
