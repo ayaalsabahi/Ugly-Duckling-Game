@@ -65,10 +65,6 @@ public class eatingScript : MonoBehaviour
                 if (eatContLocal != null)
                 {
                     eatContLocals.Add(eatContLocal);
-                    if(eatContLocal.item != null)
-                    {
-                        gameObject.GetComponent<PlayerController>().AddToInventory(eatContLocal.item.collectibleID);
-                    }
                 }
 
             }
