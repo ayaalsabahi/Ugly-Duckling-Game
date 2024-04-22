@@ -101,6 +101,12 @@
         },
         {
             "m_Id": "84aaac09d81d432da36c4eda45aa4edb"
+        },
+        {
+            "m_Id": "4d06560ffd4c4f53afd852b0bcff7141"
+        },
+        {
+            "m_Id": "bcd07af5d4144486a072885325bf5fef"
         }
     ],
     "m_GroupDatas": [],
@@ -118,6 +124,20 @@
                     "m_Id": "84aaac09d81d432da36c4eda45aa4edb"
                 },
                 "m_SlotId": 1
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "35206b963082474182cd6519ac0d2713"
+                },
+                "m_SlotId": 2
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "4d06560ffd4c4f53afd852b0bcff7141"
+                },
+                "m_SlotId": -1246887539
             }
         },
         {
@@ -202,6 +222,20 @@
                     "m_Id": "0a778659e38d4e15a4388dd0487ed090"
                 },
                 "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "bcd07af5d4144486a072885325bf5fef"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "4d06560ffd4c4f53afd852b0bcff7141"
+                },
+                "m_SlotId": -2080301562
             }
         },
         {
@@ -577,6 +611,21 @@
 {
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "1f7508848c834788a65f05afcdf9e3f9",
+    "m_Id": -2080301562,
+    "m_DisplayName": "Refraction",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "_Refraction",
+    "m_StageCapability": 2,
+    "m_Value": 0.0,
+    "m_DefaultValue": 0.0,
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "288f1a6bbeb8458e96128d718b1a5675",
     "m_Id": 2,
     "m_DisplayName": "Out_Float",
@@ -807,6 +856,74 @@
         "m_SerializableColors": []
     },
     "m_SerializedDescriptor": "VertexDescription.Tangent"
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "4b3e690ab205472ba8bcc761c56ea777",
+    "m_Id": 0,
+    "m_DisplayName": "Refraction",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_Value": 0.0,
+    "m_DefaultValue": 0.0,
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.SubGraphNode",
+    "m_ObjectId": "4d06560ffd4c4f53afd852b0bcff7141",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "Refraction Sub Graph",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": -630.5,
+            "y": 366.9999694824219,
+            "width": 220.5,
+            "height": 119.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "1f7508848c834788a65f05afcdf9e3f9"
+        },
+        {
+            "m_Id": "dcd17caad5024952a5a5a6722834ebb2"
+        },
+        {
+            "m_Id": "eb2e9372293d4077abf375838b924928"
+        },
+        {
+            "m_Id": "cad0c395a3b249c6b954e0105cafe561"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": false,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_SerializedSubGraph": "{\n    \"subGraph\": {\n        \"fileID\": -5475051401550479605,\n        \"guid\": \"e78cd3f9cc114df45b989d2570fc2e09\",\n        \"type\": 3\n    }\n}",
+    "m_PropertyGuids": [
+        "42a968a6-1979-4536-97c3-78f34eace670",
+        "6ee80315-ba66-4b13-acf6-3433524e61a3"
+    ],
+    "m_PropertyIds": [
+        -2080301562,
+        -1246887539
+    ],
+    "m_Dropdowns": [],
+    "m_DropdownSelectedEntries": []
 }
 
 {
@@ -1636,6 +1753,42 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
+    "m_ObjectId": "bcd07af5d4144486a072885325bf5fef",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "Property",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": -880.5,
+            "y": 404.5,
+            "width": 129.0,
+            "height": 34.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "4b3e690ab205472ba8bcc761c56ea777"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_Property": {
+        "m_Id": "86c4801c964c4c37b7c451c2d79c19f0"
+    }
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "bebee892e74c4955a91e9a52d221832d",
     "m_Id": 0,
@@ -1681,6 +1834,29 @@
         "m_SerializableColors": []
     },
     "m_SerializedDescriptor": "SurfaceDescription.BaseColor"
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
+    "m_ObjectId": "cad0c395a3b249c6b954e0105cafe561",
+    "m_Id": 2,
+    "m_DisplayName": "Out_Vector3",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out_Vector3",
+    "m_StageCapability": 2,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+    },
+    "m_Labels": []
 }
 
 {
@@ -1768,6 +1944,21 @@
 {
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "dcd17caad5024952a5a5a6722834ebb2",
+    "m_Id": -1246887539,
+    "m_DisplayName": "Distortion",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "_Distortion",
+    "m_StageCapability": 2,
+    "m_Value": 0.0,
+    "m_DefaultValue": 0.0,
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "dd81a86a2aca4a37994f485342bca293",
     "m_Id": 0,
     "m_DisplayName": "Wave Speed",
@@ -1832,6 +2023,29 @@
         "b": 0.0,
         "a": 1.0
     }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
+    "m_ObjectId": "eb2e9372293d4077abf375838b924928",
+    "m_Id": 1,
+    "m_DisplayName": "Out_Normal",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out_Normal",
+    "m_StageCapability": 2,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+    },
+    "m_Labels": []
 }
 
 {
