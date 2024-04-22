@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1061952253066486177}
   - component: {fileID: 2034983678655304439}
   - component: {fileID: 700728855677675426}
+  - component: {fileID: 2095258200507036731}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -48,14 +49,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f603d6f1f9d914a579c37833a7357383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  greenery1: {fileID: 0}
-  newMaterial: {fileID: 2100000, guid: 9483c27b33c724f008b00457d1950338, type: 2}
   mainDuck: {fileID: 0}
   newScale: {x: 2, y: 2, z: 2}
   isHidden: 0
   detectionRadius: 0
-  timeNeeded: 3
+  timeNeeded: 5
   doneHiding: {fileID: 11400000, guid: 89a9be92a8f1a42a2a45a3811f83a57d, type: 2}
+  slideBar: {fileID: 917947630686092890, guid: 3a24ee2f664f542de8a8d9f57c48bea1, type: 3}
 --- !u!114 &1726613222057977114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,3 +156,31 @@ MonoBehaviour:
   dialogueText: {fileID: 0}
   lettersPerSecond: 3
   isTyping: 0
+--- !u!114 &2095258200507036731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5251171915228464375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06ed7bed0d7c4bbdaa0434dc24ebd7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2104d965c416646478f0594cffc3cfbb, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5032263372971528273}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: setBar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

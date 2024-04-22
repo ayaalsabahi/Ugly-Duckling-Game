@@ -31,9 +31,7 @@ public class PoliceDuck : MonoBehaviour
     //this is where the duck will be following the player, it will do so using navmesh
     public void FollowDuck()
     {
-        Debug.Log("hey police active");
         isFollowing = true;
-        //gameObject.SetActive(true);
         agent.enabled = true;
         agent.speed = followSpeed; 
     }
@@ -59,7 +57,8 @@ public class PoliceDuck : MonoBehaviour
 
     public void DontFollowDuck()
     {
-        isFollowing = false; //basically stop where you are / roam around -> something to change later on 
+        isFollowing = false; //basically stop where you are / roam around -> something to change later on
+        GameManager.Instance.isFleeing = false; 
     }
 
     private void SetRandomDestination()

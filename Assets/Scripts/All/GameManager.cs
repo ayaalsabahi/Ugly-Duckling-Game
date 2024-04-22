@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI; 
 
 public class GameManager : MonoBehaviour
 {
@@ -19,18 +20,20 @@ public class GameManager : MonoBehaviour
     GameState state;
 
     //create a timer for how long they have that functionality later on??
-    public GameObject greenery1; //we can make an array of different greenieries to be unlocked later on
-    public Material newMaterial;
+    //public GameObject greenery1; //we can make an array of different greenieries to be unlocked later on
+    //public Material newMaterial;
     public GameObject mainDuck; 
     public Vector3 newScale = new Vector3(2f, 2f, 2f); // New scale for the object
 
-    public bool isHidden = false; //refers to whether we are in the weeds or not 
+    public bool isHidden; //refers to whether we are in the weeds or not
+    public bool isFleeing; 
     public float detectionRadius;
 
     [Header("Timer things")]
     public float timeNeeded;
     private float timeAccumelated; 
-    public GameEvent doneHiding; 
+    public GameEvent doneHiding;
+    public Slider slideBar; 
 
     private void Awake()
     {
@@ -41,17 +44,22 @@ public class GameManager : MonoBehaviour
         }
         Instance = this;
 
-
+        slideBar.value = 0;
+        isHidden = false;
+        isFleeing = false; 
     }
 
     private void Update()
     {
+        
         if (isHidden)
         {
+            
             timeAccumelated += Time.deltaTime;
             if(timeAccumelated >= timeNeeded)
             {
-                doneHiding.Raise(); 
+                doneHiding.Raise();
+                slideBar.value = 0; 
             }
         }
 
@@ -91,6 +99,9 @@ public class GameManager : MonoBehaviour
 
     }
 
-
+    public void setBar()
+    {
+        slideBar.value = timeNeeded; 
+    }
 
 }
