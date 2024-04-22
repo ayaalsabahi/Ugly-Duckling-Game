@@ -17,8 +17,9 @@ public class eatController : MonoBehaviour
     [Header("Events")]
     public GameEvent biggerAbility;
     public GameEvent duckEaten;
-    public GameEvent smallBite; 
-    
+    public GameEvent smallBite;
+
+    public Collectible item;
 
     private enemyFlee enemyFleeScriptLocal; 
 
