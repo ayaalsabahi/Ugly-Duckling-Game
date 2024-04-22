@@ -81,7 +81,7 @@ public class PoliceDuck : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         // Check if the collision involves the player
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && isFollowing)
         {
             SceneManager.LoadScene("GameOver");
             // Here you can add any actions you want to take when the object collides with the player
