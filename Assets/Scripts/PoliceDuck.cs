@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI; 
+using UnityEngine.AI;
+using UnityEngine.SceneManagement; 
 
 public class PoliceDuck : MonoBehaviour
 {
@@ -75,5 +76,15 @@ public class PoliceDuck : MonoBehaviour
         NavMeshHit navHit;
         NavMesh.SamplePosition(dirRand, out navHit, dist, layers);
         return navHit.position;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        // Check if the collision involves the player
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            SceneManager.LoadScene("GameOver");
+            // Here you can add any actions you want to take when the object collides with the player
+        }
     }
 }
