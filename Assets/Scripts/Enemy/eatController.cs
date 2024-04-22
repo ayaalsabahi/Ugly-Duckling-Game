@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI; 
 
 public class eatController : MonoBehaviour
 {
@@ -21,11 +22,12 @@ public class eatController : MonoBehaviour
 
     public Collectible item;
 
-    private enemyFlee enemyFleeScriptLocal; 
-
+    private enemyFlee enemyFleeScriptLocal;
+    public Slider duckSlider; 
 
     private void Start()
     {
+        duckSlider.value = maxEat;
         particleSystemEnemy = GetComponent<ParticleSystem>();
         enemyFleeScriptLocal = GetComponent<enemyFlee>();
 
@@ -48,6 +50,7 @@ public class eatController : MonoBehaviour
         particleSystemEnemy.Play();
         eatCount++;
         smallBite.Raise();
+        duckSlider.value -= 1; 
         if (eatCount == maxEat)
         {
             duckEaten.Raise();
