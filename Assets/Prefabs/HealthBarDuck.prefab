@@ -101,9 +101,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4236186361453814689}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.8702129, y: 1.8702129, z: 1.8702129}
+  m_LocalRotation: {x: -0, y: 0.72683454, z: -0, w: 0.6868127}
+  m_LocalPosition: {x: 0, y: 0, z: 128.51576}
+  m_LocalScale: {x: 0.2337772, y: 0.23377733, z: 0.2337765}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 812364338632114824}
@@ -111,7 +111,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 658.7969, y: 769.8887}
+  m_AnchoredPosition: {x: -275.6469, y: 415.19125}
   m_SizeDelta: {x: 812, y: 433.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &421633137603123243
@@ -287,7 +287,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -328.8, y: 161}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0.67126465, y: 0.17440796}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5835597143687065283
@@ -374,7 +374,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 5
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -405,14 +405,14 @@ RectTransform:
   m_GameObject: {fileID: 8525810929188798673}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.0028590246, y: 0.0028590246, z: 0.0028590246}
+  m_LocalScale: {x: 0.002881311, y: 0.0023283323, z: 0.0023283323}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 812364338632114824}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.317, y: -0.000015258789}
+  m_AnchoredPosition: {x: -0.004000008, y: -0.000015258789}
   m_SizeDelta: {x: 231, y: 61}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3027054301734087616
@@ -444,10 +444,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: a96fa691834d64c048f026ccfee38f00, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
