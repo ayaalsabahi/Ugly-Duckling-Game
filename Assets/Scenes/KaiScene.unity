@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731704, g: 0.1341472, b: 0.121078566, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731716, g: 0.13414738, b: 0.121078566, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1134,8 +1134,8 @@ MonoBehaviour:
     lines:
     - Hi
   QM: {fileID: 1652843232}
-  isBlockingDuck: 0
-  moveDistance: 0
+  isBlockingDuck: 1
+  moveDistance: -13
 --- !u!54 &1383142698
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1675,7 +1675,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 419.8, y: 3.26, z: 806.1}
-  m_LocalScale: {x: 10, y: 5, z: 3}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
