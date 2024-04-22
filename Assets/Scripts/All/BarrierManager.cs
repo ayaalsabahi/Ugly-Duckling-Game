@@ -13,6 +13,10 @@ public class BarrierManager : MonoBehaviour
     public BoxCollider boxCollider;
     [SerializeField]
     public MeshRenderer meshRenderer;
+    [SerializeField]
+    public bool isThoughtTrigger;
+    [SerializeField]
+    public Dialogue dialogue;
 
     // Start is called before the first frame update
     void Start()
@@ -43,5 +47,16 @@ public class BarrierManager : MonoBehaviour
           }
         }
       }  
+    }
+
+    public void OnTriggerEnter(Collider thing)
+    {
+      if(thing.tag == "Player")
+      {
+        if(!DialogueManager.Instance.isTyping)
+        {
+          StartCoroutine(DialogueManager.Instance.ShowDialogue(dialogue));
+        }
+      }
     }
 }
