@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     public Vector3 newScale = new Vector3(2f, 2f, 2f); // New scale for the object
 
     public bool isHidden; //refers to whether we are in the weeds or not
-    public bool isFleeing; 
+    public bool isFleeing; //this is if we are running away from the cops
     public float detectionRadius;
 
     [Header("Timer things")]
@@ -52,21 +52,25 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         
-        if (isHidden)
+        if (isHidden && isFleeing)
         {
             
             timeAccumelated += Time.deltaTime;
+            slideBar.value = timeNeeded - timeAccumelated; 
             if(timeAccumelated >= timeNeeded)
             {
                 doneHiding.Raise();
-                slideBar.value = 0; 
+                slideBar.value = 0;
+                isFleeing = false; 
             }
         }
 
-        else
+        if(!isHidden & isFleeing)
         {
-            timeAccumelated = 0; 
+            setBar();
         }
+
+       
     }
 
 

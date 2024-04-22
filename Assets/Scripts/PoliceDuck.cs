@@ -41,6 +41,7 @@ public class PoliceDuck : MonoBehaviour
         if (isFollowing && !GameManager.Instance.isHidden) //only follow if not hiding
         {
             agent.SetDestination(player.position);
+            GameManager.Instance.isFleeing = true; 
         }
         else
         {
