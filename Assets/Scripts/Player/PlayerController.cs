@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     public List<string> stomach = new List<string>();
     public int noDucksEaten;
     public QuestManager QM;
+    public float heightOffset = 1.0f;
 
     //drawing the radius to see where the detection is
     private GameObject radiusVisual; // Declare the GameObject outside of any method
@@ -139,20 +140,45 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator InteractCoroutine()
     {
-        RaycastHit hit;
+        // RaycastHit hit;
 
         // Vector3 forward = transform.TransformDirection(Vector3.forward) * detectionDistance;
-        // Debug.DrawLine(transform.position, transform.position + forward, Color.blue, 10.0f);
+        // Debug.DrawLine(transform.position, transform.position + forward, Color.red, 20.0f);
 
-        if(Physics.Raycast(transform.position, transform.forward, out hit, detectionDistance))
+        // RaycastHit hit;
+        // Vector3 startPosition = transform.position + Vector3.up * heightOffset; // Modified start position with height offset
+        // Vector3 forward = transform.TransformDirection(Vector3.forward) * detectionDistance;
+        // Debug.DrawLine(startPosition, startPosition + forward, Color.red, 20.0f);
+
+        // if(Physics.Raycast(transform.position, transform.forward, out hit, detectionDistance))
+        // {
+        //     Debug.Log("Hit: " + hit.collider.name);
+        //     Interactable interactableComponent = hit.collider.GetComponent<Interactable>();
+        //     if (interactableComponent != null)
+        //     {
+        //         yield return interactableComponent.Interact(); // Assuming this code is inside a Coroutine since 'yield return' is used
+        //     }
+        // }
+
+        Vector3 centerPosition = transform.position + Vector3.up * heightOffset; // Center position for sphere check
+        Collider[] hitColliders = Physics.OverlapSphere(centerPosition, detectionDistance);
+
+        foreach (var hitCollider in hitColliders)
         {
-            Debug.Log("Hit: " + hit.collider.name);
-            Interactable interactableComponent = hit.collider.GetComponent<Interactable>();
+            Interactable interactableComponent = hitCollider.GetComponent<Interactable>();
             if (interactableComponent != null)
             {
-                yield return interactableComponent.Interact(); // Assuming this code is inside a Coroutine since 'yield return' is used
+                Debug.Log("Interacting with: " + hitCollider.name);
+                yield return interactableComponent.Interact();
             }
         }
+    }
+
+    void OnDrawGizmos()
+    {
+        Vector3 centerPosition = transform.position + Vector3.up * heightOffset;
+        Gizmos.color = Color.red; // Set the color of the Gizmos
+        Gizmos.DrawWireSphere(centerPosition, detectionDistance); // Draw a wireframe sphere
     }
 
     public void AddToInventory(string itemID)
