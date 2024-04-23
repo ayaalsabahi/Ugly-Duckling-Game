@@ -68,12 +68,14 @@ public class eatController : MonoBehaviour
                                                         //that you got a certain ability & the level manager handles it
                 {
                 biggerAbility.Raise();
+                Debug.Log("Reached bigger duck mode");
                 }
         }
         if (gameObject.CompareTag("EnemyRun"))
         {
             //now I'm suspicious and want to run away
             enemyFleeScriptLocal.SusMode();
+            Debug.Log("Reached sus mode");
            
         }
     }

@@ -19,6 +19,7 @@ public class PoliceDuck : MonoBehaviour
     public float roamTimer = 1000f; //every how many seconds change positions
     private float timer; //temporary variable
     private Vector3 randomDestination;
+    public float normalSpeed; 
 
     // Start is called before the first frame update
     private void Start()
@@ -26,7 +27,7 @@ public class PoliceDuck : MonoBehaviour
         //gameObject.SetActive(false); //at the start we deactivate the duck
         
         agent = GetComponent<NavMeshAgent>();
-        agent.enabled = false; 
+        agent.speed = normalSpeed;
     }
 
     //this is where the duck will be following the player, it will do so using navmesh

@@ -125,6 +125,7 @@ MonoBehaviour:
   followSpeed: 50
   roamRadius: 40
   roamTimer: 10
+  normalSpeed: 40
 --- !u!114 &5685811302469144289
 MonoBehaviour:
   m_ObjectHideFlags: 0

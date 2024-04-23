@@ -30,7 +30,6 @@ public class enemyFlee : MonoBehaviour
     [Header("For fleeing")]
     public float detectionRadius; //this distance is for the 'eating' being visible versus not 
     private bool isFlee;
-    public float enemyDistanceRun = 5f;
     public Material fleeMaterial; //temporary color change when fleeing
     public float fleeDistance = 30f; // Distance at which the object starts fleeing
     public float fleeingSpeed; 
@@ -88,7 +87,6 @@ public class enemyFlee : MonoBehaviour
                 timer = roamTimer;
 
             }
-
         }
 
     }
@@ -101,7 +99,7 @@ public class enemyFlee : MonoBehaviour
         // Loop through all the colliders that intersect with the sphere
         foreach (Collider collider in colliders)
         {
-            if (collider.CompareTag("Player") && !GameManager.Instance.isHidden) // as well as the object not being hidden 
+            if ((collider.CompareTag("Player")) && !GameManager.Instance.isHidden ) // as well as the object not being hidden 
             {
                 Debug.Log("reached fleeing mode;");
                 fleeMode();
