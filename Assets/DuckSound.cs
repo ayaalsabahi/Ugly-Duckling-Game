@@ -41,9 +41,8 @@ public class DuckSound : MonoBehaviour
         Debug.Log("Second" + (maxVolumeDistance - minVolumeDistance));
         float normalizedDistance = Mathf.Clamp01((distanceToPlayer - minVolumeDistance) / (maxVolumeDistance - minVolumeDistance));
         float volume = Mathf.Clamp01(1.0f - Mathf.Log(normalizedDistance + 1.0f) / Mathf.Log(2.0f));
-        volume *= maxVolume;
-        quackSource.volume = volume;
-        fleeSource.volume = volume;
+        quackSource.volume = volume * maxVolume/2;
+        fleeSource.volume = volume * maxVolume;
         Debug.Log(volume + "Volume");
 
     }

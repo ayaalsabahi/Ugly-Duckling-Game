@@ -4978,12 +4978,12 @@ MonoBehaviour:
   player: {fileID: 462552392829435553, guid: 9ecbe9f40f8e8446cb02665ff73307cd, type: 3}
   isSuspicous: 0
   suspiciousMaterial: {fileID: 2100000, guid: 62d2c8abcb6f84fdfb53bbc14b8a02d8, type: 2}
-  suspiciousSpeed: 10
+  suspiciousSpeed: 30
   detectionRadius: 50
   enemyDistanceRun: 3
   fleeMaterial: {fileID: 2100000, guid: dba4c2518d29b488a9392394befd42ec, type: 2}
   fleeDistance: 30
-  fleeingSpeed: 20
+  fleeingSpeed: 50
   roamRadius: 10
   roamTimer: 3
   fleeModeEvent: {fileID: 11400000, guid: 2104d965c416646478f0594cffc3cfbb, type: 2}
@@ -5108,7 +5108,7 @@ MonoBehaviour:
   fleeDuck: {fileID: 8300000, guid: 0462acc5153ab4a46a1a7f4f31fe6b6e, type: 3}
   player: {fileID: 0}
   minVolumeDistance: 1
-  maxVolumeDistance: 100
+  maxVolumeDistance: 60
   maxVolume: 1
 --- !u!1001 &2806831244214526658
 PrefabInstance:

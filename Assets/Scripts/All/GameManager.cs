@@ -99,7 +99,7 @@ public class GameManager : MonoBehaviour
         //collider.isTrigger = true; //change the ability to pass through greenery
 
         Transform transform = mainDuck.transform;
-        transform.localScale = transform.localScale * 2; //change the object scale 
+        transform.localScale = newScale; //change the object scale 
 
     }
 
