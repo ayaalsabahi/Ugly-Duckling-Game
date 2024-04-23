@@ -68,8 +68,7 @@ public class eatController : MonoBehaviour
                                                         //that you got a certain ability & the level manager handles it
                 {
                 biggerAbility.Raise();
-                
-            }
+                }
         }
         if (gameObject.CompareTag("EnemyRun"))
         {
