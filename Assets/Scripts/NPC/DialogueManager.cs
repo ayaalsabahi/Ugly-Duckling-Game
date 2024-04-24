@@ -49,6 +49,7 @@ public class DialogueManager : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 CloseDialogueBox();
+                Time.timeScale = 1;
             }
         }
     }
@@ -69,6 +70,7 @@ public class DialogueManager : MonoBehaviour
             dialogueText.text += letter;
             yield return new WaitForSeconds(1f / lettersPerSecond);
         }
+        Time.timeScale = 0;
         isTyping = false;
     }
 }
