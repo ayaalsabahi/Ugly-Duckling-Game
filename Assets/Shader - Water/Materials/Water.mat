@@ -54,7 +54,7 @@ Material:
     - _Refraction: 0.0563
     - _Smoothness: 1
     - _Transparency: 0.944
-    - _Wave_Speed: 0.00572
+    - _Wave_Speed: 0
     m_Colors:
     - _Foam_Color: {r: 1, g: 1, b: 1, a: 0.5686275}
     - _Water_Color: {r: 0, g: 0.5566038, b: 0.5217185, a: 0.6509804}
