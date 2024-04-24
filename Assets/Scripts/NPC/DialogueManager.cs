@@ -70,7 +70,7 @@ public class DialogueManager : MonoBehaviour
             dialogueText.text += letter;
             yield return new WaitForSeconds(1f / lettersPerSecond);
         }
-        Time.timeScale = 0;
+        // Time.timeScale = 0;
         isTyping = false;
     }
 }
