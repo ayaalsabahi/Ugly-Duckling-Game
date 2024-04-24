@@ -5546,10 +5546,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f49535206f0b24dd793efa702e7596ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: {fileID: 8300000, guid: d95dc0bddf80f46d382a6759161066da, type: 3}
+  sound: {fileID: 8300000, guid: 0b860727660b142f3af8d23e3da26781, type: 3}
   player: {fileID: 1886416986}
   minVolumeDistance: 0
-  maxVolumeDistance: 300
+  maxVolumeDistance: 200
   maxVolume: 1
 --- !u!1001 &1818295147
 PrefabInstance:
@@ -6196,7 +6196,7 @@ MonoBehaviour:
   sound: {fileID: 8300000, guid: 8cdd09680f2194750932884921f6acda, type: 3}
   player: {fileID: 1886416986}
   minVolumeDistance: 0
-  maxVolumeDistance: 700
+  maxVolumeDistance: 300
   maxVolume: 1
 --- !u!4 &1936575752
 Transform:
@@ -6753,10 +6753,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f49535206f0b24dd793efa702e7596ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: {fileID: 0}
-  player: {fileID: 0}
+  sound: {fileID: 8300000, guid: d95dc0bddf80f46d382a6759161066da, type: 3}
+  player: {fileID: 1886416986}
   minVolumeDistance: 0
-  maxVolumeDistance: 0
+  maxVolumeDistance: 300
   maxVolume: 1
 --- !u!224 &2119359489 stripped
 RectTransform:
