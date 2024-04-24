@@ -44,6 +44,9 @@ public class enemyFlee : MonoBehaviour
     public GameEvent fleeModeEvent;
     private DuckSound DuckSoundLocal;
 
+    public GameObject questionMark;
+    public GameObject exclamationMark;
+
     private void Start()
     {
         isFlee = false;
@@ -52,6 +55,8 @@ public class enemyFlee : MonoBehaviour
         timer = roamTimer;
         if(gameObject.CompareTag("EnemyRun")) SetRandomDestination();
         DuckSoundLocal = GetComponent<DuckSound>();
+        questionMark.SetActive(false);
+        exclamationMark.SetActive(false);
 
     }
 
@@ -115,7 +120,9 @@ public class enemyFlee : MonoBehaviour
         DuckSoundLocal.FleeSound();
         agent.speed = fleeingSpeed;
         fleeModeEvent.Raise();
-       
+        exclamationMark.SetActive(true);
+        questionMark.SetActive(false);
+
     }
 
     public void SusMode()
@@ -127,6 +134,8 @@ public class enemyFlee : MonoBehaviour
             Renderer renderer = gameObject.GetComponent<Renderer>(); //change color to red
             renderer.material = suspiciousMaterial; //change the color of the duck
             DuckSoundLocal.SusSound();
+            questionMark.SetActive(true);
+
         }
         
        
@@ -161,5 +170,10 @@ public class enemyFlee : MonoBehaviour
         return navHit.position;
     }
 
+    public void NoLongerSus()
+    {
+        questionMark.SetActive(false);
+        exclamationMark.SetActive(false);
 
+    }
 }

@@ -15,6 +15,7 @@ public class DuckSound : MonoBehaviour
     public float maxVolumeDistance;
     public float maxVolume = 1.0f;
 
+
     private void Awake()
     {
         quackSource = gameObject.AddComponent<AudioSource>();
@@ -30,6 +31,7 @@ public class DuckSound : MonoBehaviour
 
         quackSource.loop = true;
         fleeSource.loop = true;
+
 
     }
 
@@ -53,5 +55,11 @@ public class DuckSound : MonoBehaviour
     {
         quackSource.Stop();
         fleeSource.Play();
+    }
+
+    public void stopSound()
+    {
+        quackSource.Stop();
+        fleeSource.Stop();
     }
 }
