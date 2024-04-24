@@ -17,6 +17,7 @@ public class BarrierManager : MonoBehaviour
     public bool isThoughtTrigger;
     [SerializeField]
     public Dialogue dialogue;
+    public int passTimes;
 
     // Start is called before the first frame update
     void Start()
@@ -51,12 +52,13 @@ public class BarrierManager : MonoBehaviour
 
     public void OnTriggerEnter(Collider thing)
     {
-      if(thing.tag == "Player")
+      if(thing.tag == "Player" && passTimes == 0)
       {
         if(!DialogueManager.Instance.isTyping)
         {
           StartCoroutine(DialogueManager.Instance.ShowDialogue(dialogue));
         }
+        passTimes++;
       }
     }
 }
