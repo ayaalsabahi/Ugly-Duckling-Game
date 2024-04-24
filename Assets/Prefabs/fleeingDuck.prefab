@@ -168,7 +168,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7022169548184598008}
   serializedVersion: 8
-  lengthInSec: 1
+  lengthInSec: 3
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -791,15 +791,15 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 4
+    type: 0
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
-    m_Position: {x: 0, y: 0, z: 0}
-    m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 1, y: 1, z: 1}
+    m_Position: {x: -0.0000013319318, y: 0, z: -0.0000032701012}
+    m_Rotation: {x: -0, y: 0, z: 0}
+    m_Scale: {x: 0.3636374, y: 0.3636374, z: 0.36363736}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -874,11 +874,11 @@ ParticleSystem:
     m_TextureColorAffectsParticles: 1
     m_TextureAlphaAffectsParticles: 1
     m_TextureBilinearFiltering: 0
-    randomDirectionAmount: 1
+    randomDirectionAmount: 0
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 5
+      value: 20
       mode: 0
       spread: 0
       speed:
@@ -936,7 +936,7 @@ ParticleSystem:
           m_RotationOrder: 4
     arc:
       value: 360
-      mode: 0
+      mode: 1
       spread: 0
       speed:
         serializedVersion: 2
@@ -997,7 +997,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 35
+      scalar: 5
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -1103,7 +1103,7 @@ ParticleSystem:
     m_BurstCount: 0
     m_Bursts: []
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       serializedVersion: 2
       minMaxState: 1
@@ -1114,22 +1114,22 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 1
+          value: 1
+          inSlope: -2
+          outSlope: -2
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
+          inWeight: 0
+          outWeight: 0
         - serializedVersion: 3
           time: 1
-          value: 1
-          inSlope: 1
+          value: 0
+          inSlope: 0
           outSlope: 0
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
+          inWeight: 0
+          outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
@@ -1427,7 +1427,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 1
+    enabled: 0
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -4904,7 +4904,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f7d22e1f1c07540a1b854f47d27cb870, type: 2}
+  - {fileID: 2100000, guid: 41cd9a97080924baeb2ea3ad6f8ad9a0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4938,10 +4938,10 @@ ParticleSystemRenderer:
   m_ShadowBias: 0
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
-  m_Flip: {x: 0, y: 0, z: 0}
+  m_Flip: {x: 0.5, y: 0, z: 0}
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
-  m_AllowRoll: 1
+  m_AllowRoll: 0
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
   m_UseCustomVertexStreams: 0
@@ -5187,6 +5187,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1364905683992018368}
     m_Modifications:
+    - target: {fileID: 802270712945131849, guid: 4e90b73118d7d4c0280f7ee9c7d52e3e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2715197370275687535, guid: 4e90b73118d7d4c0280f7ee9c7d52e3e,
         type: 3}
       propertyPath: m_FillAmount
@@ -5196,6 +5201,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FillAmount
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4140883111905962259, guid: 4e90b73118d7d4c0280f7ee9c7d52e3e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4191315414277998091, guid: 4e90b73118d7d4c0280f7ee9c7d52e3e,
         type: 3}
@@ -5312,10 +5322,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4236186361453814689, guid: 4e90b73118d7d4c0280f7ee9c7d52e3e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5011502619735156746, guid: 4e90b73118d7d4c0280f7ee9c7d52e3e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805585285034209242, guid: 4e90b73118d7d4c0280f7ee9c7d52e3e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5835597143687065283, guid: 4e90b73118d7d4c0280f7ee9c7d52e3e,
         type: 3}
       propertyPath: m_Name
       value: HealthBarDuck
+      objectReference: {fileID: 0}
+    - target: {fileID: 5835597143687065283, guid: 4e90b73118d7d4c0280f7ee9c7d52e3e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6497346222694901870, guid: 4e90b73118d7d4c0280f7ee9c7d52e3e,
         type: 3}
@@ -5340,7 +5370,7 @@ PrefabInstance:
     - target: {fileID: 7286326912632034195, guid: 4e90b73118d7d4c0280f7ee9c7d52e3e,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 292.1
+      value: 296.99
       objectReference: {fileID: 0}
     - target: {fileID: 8959190360802015074, guid: 4e90b73118d7d4c0280f7ee9c7d52e3e,
         type: 3}
@@ -5426,7 +5456,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b5029eba2ed4d4ac6aa77cb2c7671e6c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.59
+      value: 1.88
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b5029eba2ed4d4ac6aa77cb2c7671e6c,
         type: 3}
@@ -5531,7 +5561,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a3b3d54bf3ea44425b24f2e9634b5b38,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.57
+      value: 1.86
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a3b3d54bf3ea44425b24f2e9634b5b38,
         type: 3}
