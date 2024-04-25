@@ -61,8 +61,6 @@ public class eatController : MonoBehaviour
                 GameObject.Find("PlayerDuck").GetComponent<PlayerController>().AddToInventory(item.collectibleID);
             }
             Destroy(gameObject);
-
-            
             if (gameObject.CompareTag("biggerDuck") ) //different ducks give different abilities
                                                         //pass it onto the level manager to say
                                                         //that you got a certain ability & the level manager handles it

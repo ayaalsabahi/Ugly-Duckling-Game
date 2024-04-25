@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 5685811302469144289}
   - component: {fileID: 1874442535538967448}
   - component: {fileID: 8872854626641444338}
-  - component: {fileID: 4061696620865019804}
   m_Layer: 0
   m_Name: PoliceDuck
   m_TagString: Untagged
@@ -216,34 +215,6 @@ MonoBehaviour:
       - m_Target: {fileID: 8109496366717908704}
         m_TargetAssemblyTypeName: PoliceDuck, Assembly-CSharp
         m_MethodName: DontFollowDuck
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &4061696620865019804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5818883718493397137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e06ed7bed0d7c4bbdaa0434dc24ebd7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 2104d965c416646478f0594cffc3cfbb, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1594538614370669648}
-        m_TargetAssemblyTypeName: DuckSound, Assembly-CSharp
-        m_MethodName: playPolice
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
