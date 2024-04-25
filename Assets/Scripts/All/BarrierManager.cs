@@ -43,8 +43,14 @@ public class BarrierManager : MonoBehaviour
           if(quest.isComplete)
           {
             Debug.Log("open sesame");
-            boxCollider.enabled = false;
-            meshRenderer.enabled = false;
+            if(boxCollider != null)
+            {
+              boxCollider.enabled = false;
+            }
+            if(meshRenderer != null)
+            {
+              meshRenderer.enabled = false;
+            }
           }
         }
       }  
