@@ -257,6 +257,7 @@ MonoBehaviour:
   isThoughtTrigger: 0
   dialogue:
     lines: []
+  passTimes: 0
 --- !u!23 &566602643 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 5795944373222202167, guid: d557543c290fb40e289f4a23d80d1e83,
@@ -300,6 +301,7 @@ MonoBehaviour:
   isThoughtTrigger: 0
   dialogue:
     lines: []
+  passTimes: 0
 --- !u!1 &603524150
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,6 +533,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PoliceDuck
       objectReference: {fileID: 0}
+    - target: {fileID: 6226543656578301970, guid: 00c38d0bff73a4423ade09690696b483,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1886416986}
     - target: {fileID: 8109496366717908704, guid: 00c38d0bff73a4423ade09690696b483,
         type: 3}
       propertyPath: player
@@ -559,6 +566,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 552039088144974568, guid: c670ee6a4f7b74da188949523590ed15,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1886416986}
     - target: {fileID: 671737707256792744, guid: c670ee6a4f7b74da188949523590ed15,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -589,6 +601,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -0.024002075
       objectReference: {fileID: 0}
+    - target: {fileID: 978264900973377206, guid: c670ee6a4f7b74da188949523590ed15,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1886416986}
+    - target: {fileID: 2157221304126162426, guid: c670ee6a4f7b74da188949523590ed15,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1886416986}
     - target: {fileID: 2186175090698576504, guid: c670ee6a4f7b74da188949523590ed15,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -614,6 +636,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -0.024002075
       objectReference: {fileID: 0}
+    - target: {fileID: 3212508882047499814, guid: c670ee6a4f7b74da188949523590ed15,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1886416986}
     - target: {fileID: 3280880958453406678, guid: c670ee6a4f7b74da188949523590ed15,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -624,6 +651,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3328476957674863700, guid: c670ee6a4f7b74da188949523590ed15,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1886416986}
     - target: {fileID: 3399153666279037348, guid: c670ee6a4f7b74da188949523590ed15,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -1107,6 +1139,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PoliceDuck (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6226543656578301970, guid: 00c38d0bff73a4423ade09690696b483,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1886416986}
     - target: {fileID: 8109496366717908704, guid: 00c38d0bff73a4423ade09690696b483,
         type: 3}
       propertyPath: player
@@ -1796,6 +1833,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PoliceDuck (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6226543656578301970, guid: 00c38d0bff73a4423ade09690696b483,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1886416986}
     - target: {fileID: 8109496366717908704, guid: 00c38d0bff73a4423ade09690696b483,
         type: 3}
       propertyPath: player
@@ -1875,6 +1917,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PoliceDuck (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6226543656578301970, guid: 00c38d0bff73a4423ade09690696b483,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1886416986}
     - target: {fileID: 8109496366717908704, guid: 00c38d0bff73a4423ade09690696b483,
         type: 3}
       propertyPath: player
@@ -2480,6 +2527,7 @@ MonoBehaviour:
   isThoughtTrigger: 0
   dialogue:
     lines: []
+  passTimes: 0
 --- !u!114 &1652843232 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1416413476489025350, guid: 0043a4fda16bd40b1bec9d6091f040fb,
@@ -3794,6 +3842,7 @@ MonoBehaviour:
   isThoughtTrigger: 0
   dialogue:
     lines: []
+  passTimes: 0
 --- !u!1001 &5187868813077525859
 PrefabInstance:
   m_ObjectHideFlags: 0

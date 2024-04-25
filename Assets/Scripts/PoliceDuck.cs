@@ -12,15 +12,17 @@ public class PoliceDuck : MonoBehaviour
     bool isFollowing = false;
     public float followSpeed = 50f;
 
-
+    private PoliceSound localSound; 
 
     [Header("For not fleeing")]
     public float roamRadius = 10f;
     public float roamTimer = 1000f; //every how many seconds change positions
     private float timer; //temporary variable
     private Vector3 randomDestination;
-    public float normalSpeed; 
+    public float normalSpeed;
 
+
+    private DuckSound localDuckSound; 
     // Start is called before the first frame update
     private void Start()
     {
@@ -35,7 +37,8 @@ public class PoliceDuck : MonoBehaviour
     {
         isFollowing = true;
         agent.enabled = true;
-        agent.speed = followSpeed; 
+        agent.speed = followSpeed;
+        //localSound.playPolice();
     }
 
     private void Update()
@@ -61,7 +64,8 @@ public class PoliceDuck : MonoBehaviour
     public void DontFollowDuck()
     {
         isFollowing = false; //basically stop where you are / roam around -> something to change later on
-        GameManager.Instance.isFleeing = false; 
+        GameManager.Instance.isFleeing = false;
+        //localSound.policeStop(); //stop the ringing that is going on 
     }
 
     private void SetRandomDestination()
