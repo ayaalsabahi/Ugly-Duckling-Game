@@ -16,4 +16,14 @@ public class StartMenu : MonoBehaviour
     {
         SceneManager.LoadScene("KaiScene");
     }
+
+    public void GoToHome()
+    {
+        SceneManager.LoadScene("HomePage");
+    }
+
+    public void GotoCredits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
 }
