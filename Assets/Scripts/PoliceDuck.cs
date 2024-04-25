@@ -22,7 +22,8 @@ public class PoliceDuck : MonoBehaviour
     public float normalSpeed;
 
 
-    private DuckSound localDuckSound; 
+
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -30,6 +31,7 @@ public class PoliceDuck : MonoBehaviour
         
         agent = GetComponent<NavMeshAgent>();
         agent.speed = normalSpeed;
+        localSound = GetComponent<PoliceSound>();
     }
 
     //this is where the duck will be following the player, it will do so using navmesh
@@ -38,7 +40,7 @@ public class PoliceDuck : MonoBehaviour
         isFollowing = true;
         agent.enabled = true;
         agent.speed = followSpeed;
-        //localSound.playPolice();
+        localSound.playPolice();
     }
 
     private void Update()
@@ -65,7 +67,7 @@ public class PoliceDuck : MonoBehaviour
     {
         isFollowing = false; //basically stop where you are / roam around -> something to change later on
         GameManager.Instance.isFleeing = false;
-        //localSound.policeStop(); //stop the ringing that is going on 
+        localSound.policeStop(); //stop the ringing that is going on 
     }
 
     private void SetRandomDestination()

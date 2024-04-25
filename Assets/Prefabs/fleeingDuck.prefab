@@ -5102,7 +5102,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quackingDuck: {fileID: 8300000, guid: daf0b7a409b4f479f9d8c480b015d573, type: 3}
   fleeDuck: {fileID: 8300000, guid: 0462acc5153ab4a46a1a7f4f31fe6b6e, type: 3}
-  policeSound: {fileID: 8300000, guid: 34bb337cc710645fe9592e5dd39eb5ee, type: 3}
   player: {fileID: 0}
   minVolumeDistance: 1
   maxVolumeDistance: 60

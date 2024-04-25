@@ -11,7 +11,7 @@ public class PoliceSound : MonoBehaviour
     public float maxVolumeDistance;
     public float maxVolume = 1.0f;
     // Start is called before the first frame update
-    private void Start()
+    private void Awake()
     {
         policeSource = gameObject.AddComponent<AudioSource>();
         policeSource.clip = policeSound;
