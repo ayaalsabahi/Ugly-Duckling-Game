@@ -16,7 +16,7 @@ public class PoliceDuck : MonoBehaviour
 
     [Header("For not fleeing")]
     public float roamRadius = 10f;
-    public float roamTimer = 1000f; //every how many seconds change positions
+    public float roamTimer; //every how many seconds change positions
     private float timer; //temporary variable
     private Vector3 randomDestination;
     public float normalSpeed;

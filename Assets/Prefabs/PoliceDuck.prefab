@@ -126,7 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 462552392829435553, guid: 9ecbe9f40f8e8446cb02665ff73307cd, type: 3}
   followSpeed: 50
-  roamRadius: 40
+  roamRadius: 15
   roamTimer: 10
   normalSpeed: 40
 --- !u!114 &5685811302469144289
