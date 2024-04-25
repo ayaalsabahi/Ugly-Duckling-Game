@@ -465,7 +465,7 @@ MonoBehaviour:
   quest: {fileID: 11400000, guid: 3ff3889dc9e8f47458e86e88ebe9dc3e, type: 2}
   dialogue:
     lines:
-    - Hi
+    - 
   QM: {fileID: 1652843232}
   isBlockingDuck: 1
   moveDistance: 13
@@ -3101,7 +3101,7 @@ MonoBehaviour:
   quest: {fileID: 11400000, guid: d9e3a119c8add4d9e9b7801471894c53, type: 2}
   dialogue:
     lines:
-    - Hi
+    - 
   QM: {fileID: 1652843232}
   isBlockingDuck: 0
   moveDistance: 0
@@ -4790,7 +4790,7 @@ MonoBehaviour:
   quest: {fileID: 11400000, guid: 8ed286f22a30c44a4a534593ffd884ba, type: 2}
   dialogue:
     lines:
-    - Hi
+    - 
   QM: {fileID: 1652843232}
   isBlockingDuck: 1
   moveDistance: 13
@@ -5673,12 +5673,6 @@ BoxCollider:
     type: 3}
   m_PrefabInstance: {fileID: 1223263141743241822}
   m_PrefabAsset: {fileID: 0}
---- !u!23 &1648305370 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 3266233803744090179, guid: d557543c290fb40e289f4a23d80d1e83,
-    type: 3}
-  m_PrefabInstance: {fileID: 1223263141743241822}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1648305372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5694,7 +5688,7 @@ MonoBehaviour:
   questID: 1
   QM: {fileID: 1652843232}
   boxCollider: {fileID: 1648305369}
-  meshRenderer: {fileID: 1648305370}
+  meshRenderer: {fileID: 0}
   isThoughtTrigger: 0
   dialogue:
     lines: []
