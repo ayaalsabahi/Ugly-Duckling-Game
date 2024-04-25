@@ -6,9 +6,11 @@ public class DuckSound : MonoBehaviour
 {
     public AudioClip quackingDuck;
     public AudioClip fleeDuck;
+    public AudioClip policeSound; 
 
     private AudioSource quackSource;
     private AudioSource fleeSource;
+    private AudioSource policeSource; 
 
     public Transform player;
     public float minVolumeDistance;
@@ -20,17 +22,21 @@ public class DuckSound : MonoBehaviour
     {
         quackSource = gameObject.AddComponent<AudioSource>();
         fleeSource = gameObject.AddComponent<AudioSource>();
+        fleeSource = gameObject.AddComponent<AudioSource>();
 
         quackSource.clip = quackingDuck;
         fleeSource.clip = fleeDuck;
-
+        policeSource.clip = policeSound;
         quackSource.minDistance = minVolumeDistance;
         quackSource.maxDistance = maxVolumeDistance;
         fleeSource.minDistance = minVolumeDistance;
         fleeSource.maxDistance = maxVolumeDistance;
+        policeSource.minDistance = minVolumeDistance;
+        policeSource.maxDistance = maxVolumeDistance; 
 
         quackSource.loop = true;
         fleeSource.loop = true;
+        policeSource.loop = true; 
 
 
     }
@@ -61,5 +67,11 @@ public class DuckSound : MonoBehaviour
     {
         quackSource.Stop();
         fleeSource.Stop();
+        policeSource.Stop();
+    }
+
+    public void playPolice()
+    {
+        policeSource.Play();
     }
 }

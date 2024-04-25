@@ -13,9 +13,11 @@ GameObject:
   - component: {fileID: 7764398348553167393}
   - component: {fileID: 8299862362590931695}
   - component: {fileID: 8109496366717908704}
+  - component: {fileID: 1594538614370669648}
   - component: {fileID: 5685811302469144289}
   - component: {fileID: 1874442535538967448}
   - component: {fileID: 8872854626641444338}
+  - component: {fileID: 4061696620865019804}
   m_Layer: 0
   m_Name: PoliceDuck
   m_TagString: Untagged
@@ -126,6 +128,25 @@ MonoBehaviour:
   roamRadius: 40
   roamTimer: 10
   normalSpeed: 40
+--- !u!114 &1594538614370669648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5818883718493397137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 465ff2c2ab3cd48089f14829d3b4ed79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quackingDuck: {fileID: 8300000, guid: daf0b7a409b4f479f9d8c480b015d573, type: 3}
+  fleeDuck: {fileID: 8300000, guid: 0462acc5153ab4a46a1a7f4f31fe6b6e, type: 3}
+  policeSound: {fileID: 8300000, guid: 34bb337cc710645fe9592e5dd39eb5ee, type: 3}
+  player: {fileID: 0}
+  minVolumeDistance: 0
+  maxVolumeDistance: 50
+  maxVolume: 1
 --- !u!114 &5685811302469144289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,6 +216,34 @@ MonoBehaviour:
       - m_Target: {fileID: 8109496366717908704}
         m_TargetAssemblyTypeName: PoliceDuck, Assembly-CSharp
         m_MethodName: DontFollowDuck
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4061696620865019804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5818883718493397137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06ed7bed0d7c4bbdaa0434dc24ebd7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2104d965c416646478f0594cffc3cfbb, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1594538614370669648}
+        m_TargetAssemblyTypeName: DuckSound, Assembly-CSharp
+        m_MethodName: playPolice
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
