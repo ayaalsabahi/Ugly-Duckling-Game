@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     public bool isFleeing; //this is if we are running away from the cops
     public float detectionRadius;
 
+
     [Header("Timer things")]
     public float timeNeeded;
     private float timeAccumelated; 

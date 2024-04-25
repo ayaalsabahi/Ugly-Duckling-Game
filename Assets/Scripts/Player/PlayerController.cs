@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour
 
     //drawing the radius to see where the detection is
     private GameObject radiusVisual; // Declare the GameObject outside of any method
+    public GameObject hideTutorial; 
 
 
     private void Awake()
@@ -51,6 +53,7 @@ public class PlayerController : MonoBehaviour
         detectionDistance = 5;
         // Get the Rigidbody component
         rb = GetComponent<Rigidbody>();
+        hideTutorial.SetActive(false);
 
     }
 
@@ -84,8 +87,9 @@ public class PlayerController : MonoBehaviour
         //may change how looking works
 
 
-        
+
     }
+
 
     private void LookAtWithViewControls()
     {
@@ -191,6 +195,11 @@ public class PlayerController : MonoBehaviour
     {
         // Debug.Log(rb.velocity);
         DrawRadius();
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            hideTutorial.SetActive(false);
+        }
+        
     }
 
 
@@ -237,6 +246,16 @@ public class PlayerController : MonoBehaviour
 
     public void duckEaten()
     {
-        noDucksEaten++; 
+        noDucksEaten++;
+
+        if(noDucksEaten == 3)
+        {
+            hideTutorial.SetActive(true);
+
+        }
+        else
+        {
+            hideTutorial.SetActive(false);
+        }
     }
 }
