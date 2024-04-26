@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody>();
         moveSpeed = 5;
         //detectionDistance = GameManager.Instance.detectionRadius;
-        detectionDistance = 5;
+        detectionDistance = 15;
         // Get the Rigidbody component
         rb = GetComponent<Rigidbody>();
         hideTutorial.SetActive(false);
