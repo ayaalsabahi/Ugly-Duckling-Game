@@ -17,6 +17,6 @@ MonoBehaviour:
   duckToEat: empty
   noDucksToEat: empty
   description: Eat the Hat duck to get his hat
-  startDialouge: You're too ugly to pass
-  endDialouge: Nice hat good lookin who are you
+  startDialouge: Um, yuck? You're way too ugly to get through here...
+  endDialouge: Nice hat good lookin'! Just who are you?
   isComplete: 0

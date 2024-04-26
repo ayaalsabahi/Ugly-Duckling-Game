@@ -2200,7 +2200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   finalQuest: {fileID: 11400000, guid: 3ff3889dc9e8f47458e86e88ebe9dc3e, type: 2}
-  finalCanvas: {fileID: 1955437734}
+  finalCanvas: {fileID: 0}
 --- !u!114 &230730180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4000,6 +4000,80 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 369763786}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &390607304
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 793869836}
+    m_Modifications:
+    - target: {fileID: 3667248482409946414, guid: 6705d5a8537594dbcb98e89105193e00,
+        type: 3}
+      propertyPath: m_Name
+      value: dialogueicon
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156681426576787348, guid: 6705d5a8537594dbcb98e89105193e00,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156681426576787348, guid: 6705d5a8537594dbcb98e89105193e00,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156681426576787348, guid: 6705d5a8537594dbcb98e89105193e00,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156681426576787348, guid: 6705d5a8537594dbcb98e89105193e00,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156681426576787348, guid: 6705d5a8537594dbcb98e89105193e00,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156681426576787348, guid: 6705d5a8537594dbcb98e89105193e00,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156681426576787348, guid: 6705d5a8537594dbcb98e89105193e00,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156681426576787348, guid: 6705d5a8537594dbcb98e89105193e00,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156681426576787348, guid: 6705d5a8537594dbcb98e89105193e00,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156681426576787348, guid: 6705d5a8537594dbcb98e89105193e00,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6705d5a8537594dbcb98e89105193e00, type: 3}
+--- !u!4 &390607305 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4156681426576787348, guid: 6705d5a8537594dbcb98e89105193e00,
+    type: 3}
+  m_PrefabInstance: {fileID: 390607304}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &393234962
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5276,7 +5350,8 @@ MonoBehaviour:
   isThoughtTrigger: 1
   dialogue:
     lines:
-    - I wonder if that grey duck down by the fence in the lake could be my friend
+    - Phew... I wonder if that grey duck down by the fence in the lake would be my
+      friend.
   passTimes: 0
 --- !u!65 &547007233
 BoxCollider:
@@ -8820,7 +8895,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4929941961300605004, guid: a948b3a4192794f94923aaf59a5d38d4,
+        type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 390607305}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a948b3a4192794f94923aaf59a5d38d4, type: 3}
 --- !u!4 &793869836 stripped
@@ -9009,6 +9088,80 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 806090015}
   m_Mesh: {fileID: 4300022, guid: 2072bd79c1ae41441b0d087f04e9ec49, type: 3}
+--- !u!1001 &816881247
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1950739646}
+    m_Modifications:
+    - target: {fileID: 3667248482409946414, guid: 6705d5a8537594dbcb98e89105193e00,
+        type: 3}
+      propertyPath: m_Name
+      value: dialogueicon
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156681426576787348, guid: 6705d5a8537594dbcb98e89105193e00,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156681426576787348, guid: 6705d5a8537594dbcb98e89105193e00,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156681426576787348, guid: 6705d5a8537594dbcb98e89105193e00,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156681426576787348, guid: 6705d5a8537594dbcb98e89105193e00,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156681426576787348, guid: 6705d5a8537594dbcb98e89105193e00,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156681426576787348, guid: 6705d5a8537594dbcb98e89105193e00,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156681426576787348, guid: 6705d5a8537594dbcb98e89105193e00,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156681426576787348, guid: 6705d5a8537594dbcb98e89105193e00,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156681426576787348, guid: 6705d5a8537594dbcb98e89105193e00,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156681426576787348, guid: 6705d5a8537594dbcb98e89105193e00,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6705d5a8537594dbcb98e89105193e00, type: 3}
+--- !u!4 &816881248 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4156681426576787348, guid: 6705d5a8537594dbcb98e89105193e00,
+    type: 3}
+  m_PrefabInstance: {fileID: 816881247}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &817703403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11933,7 +12086,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4929941961300605004, guid: a948b3a4192794f94923aaf59a5d38d4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1910980297}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a948b3a4192794f94923aaf59a5d38d4, type: 3}
 --- !u!1001 &985495786
@@ -12357,7 +12514,7 @@ MonoBehaviour:
   isThoughtTrigger: 1
   dialogue:
     lines:
-    - Maybe that duck can tell me how to get through the reeds
+    - Could that duck can tell me how to get through the reeds...?
   passTimes: 0
 --- !u!65 &1004359798
 BoxCollider:
@@ -22260,7 +22417,7 @@ MonoBehaviour:
   isThoughtTrigger: 1
   dialogue:
     lines:
-    - Help Help these reeds are too big I need a big duck to lift me out
+    - Help, help! These reeds are too big! I need someone big to come save me!
   passTimes: 0
 --- !u!65 &1884842873
 BoxCollider:
@@ -22855,6 +23012,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1282159541}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1910980297 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4156681426576787348, guid: 6705d5a8537594dbcb98e89105193e00,
+    type: 3}
+  m_PrefabInstance: {fileID: 5416946176897590539}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1919870329 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1997be1c93bab4b4e90159f83ae37a8f,
@@ -23053,7 +23216,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4929941961300605004, guid: a948b3a4192794f94923aaf59a5d38d4,
+        type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 816881248}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a948b3a4192794f94923aaf59a5d38d4, type: 3}
 --- !u!4 &1950739646 stripped
@@ -23155,12 +23322,6 @@ PrefabInstance:
       addedObject: {fileID: 628130333}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03807ae30a2354979a4bd95dd1b4a6e7, type: 3}
---- !u!1 &1955437734 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7619307200856508347, guid: 03807ae30a2354979a4bd95dd1b4a6e7,
-    type: 3}
-  m_PrefabInstance: {fileID: 1955437733}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1966227897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23816,7 +23977,7 @@ MonoBehaviour:
   isThoughtTrigger: 1
   dialogue:
     lines:
-    - Wow ur huge could u push the reeds asside for  me
+    - Wow, you're huge! Could you push the reeds aside for me?
   passTimes: 0
 --- !u!65 &2010747848
 BoxCollider:
@@ -26339,6 +26500,74 @@ MonoBehaviour:
   smallBite: {fileID: 11400000, guid: b5b9221a77b5740c9b69bba6dd8f749a, type: 2}
   item: {fileID: 0}
   duckSlider: {fileID: 1236648772}
+--- !u!1001 &5416946176897590539
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1113692873}
+    m_Modifications:
+    - target: {fileID: 3667248482409946414, guid: 6705d5a8537594dbcb98e89105193e00,
+        type: 3}
+      propertyPath: m_Name
+      value: dialogueicon
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156681426576787348, guid: 6705d5a8537594dbcb98e89105193e00,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.621
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156681426576787348, guid: 6705d5a8537594dbcb98e89105193e00,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.569
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156681426576787348, guid: 6705d5a8537594dbcb98e89105193e00,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156681426576787348, guid: 6705d5a8537594dbcb98e89105193e00,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156681426576787348, guid: 6705d5a8537594dbcb98e89105193e00,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156681426576787348, guid: 6705d5a8537594dbcb98e89105193e00,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156681426576787348, guid: 6705d5a8537594dbcb98e89105193e00,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156681426576787348, guid: 6705d5a8537594dbcb98e89105193e00,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156681426576787348, guid: 6705d5a8537594dbcb98e89105193e00,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156681426576787348, guid: 6705d5a8537594dbcb98e89105193e00,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6705d5a8537594dbcb98e89105193e00, type: 3}
 --- !u!114 &5598333032202822181
 MonoBehaviour:
   m_ObjectHideFlags: 0
