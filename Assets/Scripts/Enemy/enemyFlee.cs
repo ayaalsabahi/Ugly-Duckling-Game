@@ -171,10 +171,13 @@ public class enemyFlee : MonoBehaviour
         return navHit.position;
     }
 
-    //public void NoLongerSus()
-    //{
-    //    questionMark.SetActive(false);
-    //    exclamationMark.SetActive(false);
+    public void NoLongerSus()
+    {
+        questionMark.SetActive(false);
+        exclamationMark.SetActive(false);
+        isFlee = false;
+        isSuspicous = false;
+        DuckSoundLocal.stopSound();
 
-    //}
+    }
 }
