@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Practice Scene.unity
     guid: a242bdb719b7e4592944d7dda9949800
+  - enabled: 1
+    path: Assets/Scenes/RampageEndScene.unity
+    guid: 28158d92866744f50beece4a45b87045
   m_configObjects: {}
