@@ -15,4 +15,9 @@ public class PopUpUI : MonoBehaviour
             finalCanvas.SetActive(true);
         }
     }
+
+    public void removeQuest()
+    {
+        finalCanvas.SetActive(false);
+    }
 }

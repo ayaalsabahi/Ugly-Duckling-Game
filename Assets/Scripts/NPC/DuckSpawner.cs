@@ -6,8 +6,14 @@ public class DuckSpawner : MonoBehaviour
 {
     public GameObject duckPrefab; // Assign this in the inspector with your pizza prefab
     public float spawnInterval = 1.0f; // Time between each spawn
-    public float ducksToSpawn = 10;
+    public float ducksToSpawn;
     public bool isOn;
+
+    void Start()
+    {
+        ducksToSpawn = 10;
+        isOn = false;
+    }
 
     // Start is called before the first frame update
     void Update()
@@ -39,7 +45,8 @@ public class DuckSpawner : MonoBehaviour
     private void SpawnDuck()
     {
         
-        Instantiate(duckPrefab, transform.position, Quaternion.identity); // Spawn the pizza at the position of the GameObject this script is attached to
+        GameObject newObject = Instantiate(duckPrefab, transform.position, Quaternion.identity) as GameObject; // Spawn the pizza at the position of the GameObject this script is attached to
+        // newObject.transform.localScale = new Vector3(5, 5, 5);
         Debug.Log("spawning");
     }
 }

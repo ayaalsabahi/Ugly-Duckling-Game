@@ -37,6 +37,9 @@ public class PlayerController : MonoBehaviour
     public GameObject hideTutorial;
 
     private Animator animator;
+    public bool isEnd;
+    public int ducksToEnd;
+    public GameObject rampageEndCanvas;
 
     private void Awake()
     {
@@ -55,6 +58,7 @@ public class PlayerController : MonoBehaviour
         // Get the Rigidbody component
         rb = GetComponent<Rigidbody>();
         hideTutorial.SetActive(false);
+        ducksToEnd = 10;
 
     }
 
@@ -221,6 +225,10 @@ public class PlayerController : MonoBehaviour
         {
             hideTutorial.SetActive(false);
         }
+        if(ducksToEnd <=0)
+        {
+            rampageEndCanvas.SetActive(true);
+        }
         
     }
 
@@ -266,8 +274,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void BeginEnd()
+    {
+        isEnd = true;
+    }
+
     public void duckEaten()
     {
+        if(isEnd)
+        {
+            ducksToEnd--;
+        }
         noDucksEaten++;
 
         if(noDucksEaten == 3)

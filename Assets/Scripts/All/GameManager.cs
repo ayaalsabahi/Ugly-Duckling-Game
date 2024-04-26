@@ -14,7 +14,8 @@ public class GameManager : MonoBehaviour
     private enum GameState
     {
         FreeRoam,
-        Dialogue
+        Dialogue,
+        Rampage
     }
 
     GameState state;
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour
     public bool isHidden; //refers to whether we are in the weeds or not
     public bool isFleeing; //this is if we are running away from the cops
     public float detectionRadius;
+    public bool allDucksEaten;
 
 
     [Header("Timer things")]
@@ -47,6 +49,7 @@ public class GameManager : MonoBehaviour
         slideBar.value = 0;
         isHidden = false;
         isFleeing = false; 
+        allDucksEaten = false;
     }
 
     private void Update()
@@ -70,6 +73,10 @@ public class GameManager : MonoBehaviour
             setBar();
         }
 
+        if(state == GameState.Rampage && allDucksEaten)
+        {
+            DisplayRampageEnd();
+        }
        
     }
 
@@ -99,4 +106,13 @@ public class GameManager : MonoBehaviour
         timeAccumelated = 0;
     }
 
+    public void DisplayRampageEnd()
+    {
+
+    }
+
+    public void CheckIfAllEaten()
+    {
+        
+    }
 }
