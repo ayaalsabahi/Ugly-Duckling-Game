@@ -216,6 +216,14 @@ public class PlayerController : MonoBehaviour
     public void AddToInventory(string itemID)
     {
         inventory.Add(itemID);
+        if(itemID == "Hat")
+        {
+            hat.GetComponent<MeshRenderer>().enabled = true;
+        }
+        if(itemID == "Shades")
+        {
+            hat.GetComponent<MeshRenderer>().enabled = true;
+        }
         Debug.Log("Item added to inventory: " + itemID);
     }
 
