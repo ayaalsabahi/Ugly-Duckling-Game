@@ -19,7 +19,6 @@ public class PopUpUI : MonoBehaviour
 
     public void removeQuest()
     {
-        Debug.Log("I am being set inactive");
         finalCanvas.SetActive(false);
         setBefore = true; 
     }
