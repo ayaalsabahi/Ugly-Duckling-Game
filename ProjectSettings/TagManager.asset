@@ -9,6 +9,7 @@ TagManager:
   - Weeds
   - Barrier
   - Police
+  - DuckModel
   layers:
   - Default
   - TransparentFX

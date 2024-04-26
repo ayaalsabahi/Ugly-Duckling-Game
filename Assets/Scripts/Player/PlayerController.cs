@@ -34,8 +34,9 @@ public class PlayerController : MonoBehaviour
 
     //drawing the radius to see where the detection is
     private GameObject radiusVisual; // Declare the GameObject outside of any method
-    public GameObject hideTutorial; 
+    public GameObject hideTutorial;
 
+    private Animator animator;
 
     private void Awake()
     {
@@ -57,6 +58,16 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    private void Start()
+    {
+        Debug.Log("checking for animator");
+        animator = GameObject.FindGameObjectWithTag("DuckModel").GetComponentInChildren<Animator>();
+        if (animator)
+        {
+            Debug.Log("ANIMATOR FOUND...!!!");
+        }
+    }
+
     private void OnEnable()
     {
         playerControls.Character.Interact.started += InteractEvent;
@@ -75,6 +86,13 @@ public class PlayerController : MonoBehaviour
         forceDirection += moveControls.ReadValue<Vector2>().x * GetCameraRight(playerCam) * moveForce;
         forceDirection += moveControls.ReadValue<Vector2>().y * GetCameraForward(playerCam) * moveForce;
         rb.AddForce(forceDirection, ForceMode.Impulse);
+
+        if (animator)
+        {
+            Debug.Log("speed is = " + rb.velocity.magnitude);
+            animator.SetFloat("speed", rb.velocity.magnitude);
+            //animator.SetBool("isIdle", true);
+        }
         // if (rb.velocity.magnitude > maxSpeed)
         // {
         //     // If it does, normalize the velocity vector to maintain direction and multiply by maxSpeed to cap the velocity
@@ -139,6 +157,10 @@ public class PlayerController : MonoBehaviour
         QM.CompletionStatus();
         StartCoroutine(InteractCoroutine());
         Debug.Log("lets eat");
+        if (animator)
+        {
+            animator.SetTrigger("bite");
+        }
     }
 
 
