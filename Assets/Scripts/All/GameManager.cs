@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
             {
                 doneHiding.Raise();
                 slideBar.value = 0;
-                isFleeing = false; 
+                isFleeing = false;
             }
         }
 
@@ -88,25 +88,15 @@ public class GameManager : MonoBehaviour
     //change the skin to be bigger & different color
     public void BiggerAbility()
     {
-        //change skin for later on
-        //set the greenery to isTrigger and be able to pass through it
-
-        // Get the Renderer component attached to this GameObject
-        //Renderer renderer = mainDuck.GetComponent<Renderer>();
-        //renderer.material = newMaterial; //change the color of the duck
-
-
-        //Collider collider = greenery1.GetComponent<Collider>();
-        //collider.isTrigger = true; //change the ability to pass through greenery
 
         Transform transform = mainDuck.transform;
-        transform.localScale = newScale; //change the object scale 
+        transform.localScale *= 1.1f; //change the object scale 
 
     }
 
     public void setBar()
     {
-        slideBar.value = timeNeeded; 
+        slideBar.value = 0;
     }
 
 }
