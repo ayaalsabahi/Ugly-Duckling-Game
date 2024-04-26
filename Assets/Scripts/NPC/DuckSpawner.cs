@@ -10,9 +10,20 @@ public class DuckSpawner : MonoBehaviour
     public bool isOn;
 
     // Start is called before the first frame update
-    void Start()
+    void Update()
     {
-        StartCoroutine(SpawnDuckRoutine());
+        
+        if(ducksToSpawn > 0 & isOn)
+        {
+            StartCoroutine(SpawnDuckRoutine());
+            ducksToSpawn--;
+            Debug.Log("start");
+        }
+    }
+
+    public void TurnOn()
+    {
+        isOn = true;
     }
 
     private IEnumerator SpawnDuckRoutine()
@@ -21,12 +32,14 @@ public class DuckSpawner : MonoBehaviour
         {
             yield return new WaitForSeconds(spawnInterval); // Wait for specified interval
             SpawnDuck();
-            ducksToSpawn--;
+            Debug.Log("one less");
         }
     }
 
     private void SpawnDuck()
     {
+        
         Instantiate(duckPrefab, transform.position, Quaternion.identity); // Spawn the pizza at the position of the GameObject this script is attached to
+        Debug.Log("spawning");
     }
 }

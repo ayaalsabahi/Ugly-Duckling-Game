@@ -66,7 +66,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 047da83254d824c0a8cf7dc420f81447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duckPrefab: {fileID: 0}
+  duckPrefab: {fileID: 7022169548184598008, guid: ba0d4d2db976744a49f7bef113c522c7,
+    type: 3}
   spawnInterval: 1
   ducksToSpawn: 10
   isOn: 0
