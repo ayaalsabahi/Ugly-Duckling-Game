@@ -40,6 +40,8 @@ public class PlayerController : MonoBehaviour
     public bool isEnd;
     public int ducksToEnd;
     public GameObject rampageEndCanvas;
+    public GameObject hat;
+    public GameObject shades;
 
     private void Awake()
     {
@@ -212,6 +214,14 @@ public class PlayerController : MonoBehaviour
     public void AddToInventory(string itemID)
     {
         inventory.Add(itemID);
+        if(itemID == "Hat")
+        {
+            hat.GetComponent<MeshRenderer>().enabled = true;
+        }
+        if(itemID == "Shades")
+        {
+            hat.GetComponent<MeshRenderer>().enabled = true;
+        }
         Debug.Log("Item added to inventory: " + itemID);
     }
 
