@@ -181,6 +181,9 @@ MonoBehaviour:
   QM: {fileID: 0}
   heightOffset: 1
   hideTutorial: {fileID: 0}
+  isEnd: 0
+  ducksToEnd: 0
+  rampageEndCanvas: {fileID: 0}
 --- !u!114 &7772246012655215683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,7 +496,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4f0ff35cea50d4150892a0fa37a33650,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.795
+      value: 0.742
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4f0ff35cea50d4150892a0fa37a33650,
         type: 3}
