@@ -17,6 +17,6 @@ MonoBehaviour:
   duckToEat: empty
   noDucksToEat: 1
   description: Free son by eating duck and getting bigger
-  startDialouge: Help can you save my son
-  endDialouge: Thanks for freeing him!
+  startDialouge: Help, can you save my son? He's behind those reeds!
+  endDialouge: Thank you for freeing him!
   isComplete: 0

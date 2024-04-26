@@ -2200,7 +2200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   finalQuest: {fileID: 11400000, guid: 3ff3889dc9e8f47458e86e88ebe9dc3e, type: 2}
-  finalCanvas: {fileID: 1955437734}
+  finalCanvas: {fileID: 0}
 --- !u!114 &230730180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5276,7 +5276,8 @@ MonoBehaviour:
   isThoughtTrigger: 1
   dialogue:
     lines:
-    - I wonder if that grey duck down by the fence in the lake could be my friend
+    - Phew... I wonder if that grey duck down by the fence in the lake would be my
+      friend.
   passTimes: 0
 --- !u!65 &547007233
 BoxCollider:
@@ -12361,7 +12362,7 @@ MonoBehaviour:
   isThoughtTrigger: 1
   dialogue:
     lines:
-    - Maybe that duck can tell me how to get through the reeds
+    - Could that duck can tell me how to get through the reeds...?
   passTimes: 0
 --- !u!65 &1004359798
 BoxCollider:
@@ -22264,7 +22265,7 @@ MonoBehaviour:
   isThoughtTrigger: 1
   dialogue:
     lines:
-    - Help Help these reeds are too big I need a big duck to lift me out
+    - Help, help! These reeds are too big! I need someone big to come save me!
   passTimes: 0
 --- !u!65 &1884842873
 BoxCollider:
@@ -23820,7 +23821,7 @@ MonoBehaviour:
   isThoughtTrigger: 1
   dialogue:
     lines:
-    - Wow ur huge could u push the reeds asside for  me
+    - Wow, you're huge! Could you push the reeds aside for me?
   passTimes: 0
 --- !u!65 &2010747848
 BoxCollider:
