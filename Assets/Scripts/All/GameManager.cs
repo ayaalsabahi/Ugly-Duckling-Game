@@ -44,7 +44,6 @@ public class GameManager : MonoBehaviour
             return;
         }
         Instance = this;
-
         slideBar.value = 0;
         isHidden = false;
         isFleeing = false; 
@@ -96,7 +95,8 @@ public class GameManager : MonoBehaviour
 
     public void setBar()
     {
-        slideBar.value = 0;
+        slideBar.value = timeNeeded;
+        timeAccumelated = 0;
     }
 
 }
