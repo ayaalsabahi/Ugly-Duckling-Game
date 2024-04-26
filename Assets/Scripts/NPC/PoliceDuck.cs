@@ -60,7 +60,15 @@ public class PoliceDuck : MonoBehaviour
 
             }
         }
-        
+
+        Vector3 pos = transform.position;
+
+        // Lock Y-axis position
+        pos.y = 0f; // Change 0f to any other value if you want to fix the Y-position at a different height
+
+        // Apply the modified position back to the object
+        transform.position = pos;
+
     }
 
     public void DontFollowDuck()
