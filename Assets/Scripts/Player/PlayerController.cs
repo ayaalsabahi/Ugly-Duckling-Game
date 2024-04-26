@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement; 
 public class PlayerController : MonoBehaviour
 {
     
@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody>();
         moveSpeed = 5;
         //detectionDistance = GameManager.Instance.detectionRadius;
-        detectionDistance = 5;
+        detectionDistance = 15;
         // Get the Rigidbody component
         rb = GetComponent<Rigidbody>();
         hideTutorial.SetActive(false);
@@ -227,7 +227,8 @@ public class PlayerController : MonoBehaviour
         }
         if(ducksToEnd <=0)
         {
-            rampageEndCanvas.SetActive(true);
+
+            SceneManager.LoadScene("RampageEndScene");
         }
         
     }
