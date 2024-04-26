@@ -40,6 +40,8 @@ public class PlayerController : MonoBehaviour
     public bool isEnd;
     public int ducksToEnd;
     public GameObject rampageEndCanvas;
+    public GameObject hat;
+    public GameObject shades;
 
     private void Awake()
     {
