@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement; 
 public class PlayerController : MonoBehaviour
 {
     
@@ -227,7 +227,8 @@ public class PlayerController : MonoBehaviour
         }
         if(ducksToEnd <=0)
         {
-            rampageEndCanvas.SetActive(true);
+
+            SceneManager.LoadScene("RampageEndScene");
         }
         
     }
