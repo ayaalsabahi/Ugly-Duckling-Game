@@ -41,11 +41,6 @@ public class PauseMenu : MonoBehaviour
 
     }
 
-    public void Respawn()
-    {
-        // ?
-    }
-
     public void GoToMenu()
     {
         SceneManager.LoadScene("HomePage");
