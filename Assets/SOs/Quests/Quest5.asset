@@ -18,5 +18,5 @@ MonoBehaviour:
   noDucksToEat: empty
   description: Eat the shades duck in order get shades
   startDialouge: Nice hat but you're still not cool enough to hang with us
-  endDialouge: Wow shades  I guess you are cool
-  isComplete: 0
+  endDialouge: Wow shades I guess you are cool
+  isComplete: 1
