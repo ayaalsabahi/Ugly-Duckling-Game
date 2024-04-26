@@ -66,7 +66,6 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("checking for animator");
         animator = GameObject.FindGameObjectWithTag("DuckModel").GetComponentInChildren<Animator>();
         if (animator)
         {
@@ -95,7 +94,6 @@ public class PlayerController : MonoBehaviour
 
         if (animator)
         {
-            Debug.Log("speed is = " + rb.velocity.magnitude);
             animator.SetFloat("speed", rb.velocity.magnitude);
             //animator.SetBool("isIdle", true);
         }
@@ -216,6 +214,14 @@ public class PlayerController : MonoBehaviour
     public void AddToInventory(string itemID)
     {
         inventory.Add(itemID);
+        if(itemID == "Hat")
+        {
+            hat.GetComponent<MeshRenderer>().enabled = true;
+        }
+        if(itemID == "Shades")
+        {
+            hat.GetComponent<MeshRenderer>().enabled = true;
+        }
         Debug.Log("Item added to inventory: " + itemID);
     }
 
