@@ -10227,6 +10227,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1886416990}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: BeginEnd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1003449214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18583,6 +18595,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1886416985}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1886416990 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6608179485724027464, guid: 9ecbe9f40f8e8446cb02665ff73307cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1886416985}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886416987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00f6e233cd9254252a972352a58368fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1892807870
 PrefabInstance:
   m_ObjectHideFlags: 0

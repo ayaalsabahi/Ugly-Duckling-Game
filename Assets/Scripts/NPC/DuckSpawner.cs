@@ -46,7 +46,7 @@ public class DuckSpawner : MonoBehaviour
     {
         
         GameObject newObject = Instantiate(duckPrefab, transform.position, Quaternion.identity) as GameObject; // Spawn the pizza at the position of the GameObject this script is attached to
-        newObject.transform.localScale = new Vector3(5, 5, 5);
+        // newObject.transform.localScale = new Vector3(5, 5, 5);
         Debug.Log("spawning");
     }
 }
